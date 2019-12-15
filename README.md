@@ -20,20 +20,24 @@ Things you may want to cover:
 |password|string|null: false|
 |nickname|string|null: false|
 |full_name|string|null: false|
-|kana_name|string|null: false|
+|first_name|string|null: false|
+|last_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name_kana|string|null: false|
+|birthday|date|null: false|
 |prefecture|string|null: false|
 ### Association
 - has_many :comments
 - has_many :items,through: :users_item
 
-## users_itemsテーブル
+<!-- ## users_itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user|references|null: false, foreign_key: true|
 |item|references|null: false, foreign_key: true|
 ### Association
 - belongs_to  :user
-- belongs_to  :item
+- belongs_to  :item -->
 
 ## commentsテーブル
 |Column|Type|Options|
