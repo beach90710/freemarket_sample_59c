@@ -1,8 +1,10 @@
 .form
   = form_for @test,:url => {:action => :create} do |f|
     =f.label :name, "名前"
-    =f.text_field :content
+    =f.text_field :text
     =f.submit "Send"
+    =f.label :image, "画像"
+    =f.file_field :image
     
 
     
