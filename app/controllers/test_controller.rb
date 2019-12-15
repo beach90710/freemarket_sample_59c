@@ -8,7 +8,7 @@ class TestController < ApplicationController
   end
 
   def create
-    @test =  Test.create(test_params)
+    Test.create(test_params)
   end
 
   private

@@ -60,11 +60,10 @@ gem 'erb2haml'
 
 group :production do
   gem 'unicorn', '5.4.1'
-  gem 'fog-aws'
 end
 
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'fog', '1.36.0'
 gem 'thor', '0.20.3'
+gem 'fog-aws'
