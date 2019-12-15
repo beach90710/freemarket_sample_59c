@@ -13,7 +13,7 @@ class TestController < ApplicationController
 
   private
     def test_params
-      params.require(:name, :image, :text)
+      params.require(:test).permit(:name, :image, :text)
     end
 
 end
