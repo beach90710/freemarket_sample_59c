@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :last_name
   validates :first_name_kana
   validates :last_name_kana
-  # validates :birthday
+  validates :birthday
   end
   validates :email, presence: true, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
 end
