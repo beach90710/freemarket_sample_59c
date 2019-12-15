@@ -365,6 +365,7 @@ DEPENDENCIES
   devise
   erb2haml
   fog (= 1.36.0)
+  fog-aws
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
