@@ -26,6 +26,13 @@ Things you may want to cover:
 |last_name_kana|string|null: false|
 |birthday|date|null: false|
 |prefecture|string|null: false|
+|post_number|integer|null: false|
+|city|string|null: false|
+|address|integer|null: false|
+|building|string|
+|profile_text|string|
+|icon_img|string|
+
 ### Association
 - has_many :comments
 - has_many :items,through: :users_item
