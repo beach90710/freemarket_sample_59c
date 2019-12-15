@@ -19,7 +19,6 @@ Things you may want to cover:
 |email|string|null: false|
 |password|string|null: false|
 |nickname|string|null: false|
-|full_name|string|null: false|
 |first_name|string|null: false|
 |last_name|string|null: false|
 |first_name_kana|string|null: false|
@@ -35,7 +34,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :comments
-- has_many :items,through: :users_item
+- has_many :items
 
 ## commentsテーブル
 |Column|Type|Options|
@@ -59,12 +58,12 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :brand
-- belongs_to :categories
+- belongs_to :category
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false　foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :items
 
@@ -72,7 +71,7 @@ Things you may want to cover:
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false　foreign_key: true|
+|name|string|null: false|
 ### Association
 - has_many :items
 
