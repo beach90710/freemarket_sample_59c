@@ -30,21 +30,12 @@ Things you may want to cover:
 - has_many :comments
 - has_many :items,through: :users_item
 
-<!-- ## users_itemsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|user|references|null: false, foreign_key: true|
-|item|references|null: false, foreign_key: true|
-### Association
-- belongs_to  :user
-- belongs_to  :item -->
-
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :product
@@ -55,19 +46,18 @@ Things you may want to cover:
 |name|string|null: false|
 |image|string|
 |detail|text|
-|brand_id|integer|null: false, foreign_key: true|
-|categorie_id|integer|null: false, foreign_key: true|
+|brand_id|references|null: false, foreign_key: true|
+|categorie_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :brand
-- belongs_to :categorie
+- belongs_to :categories
 
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|brand_id|string|null: false foreign_key: true|
-|brand_name|string|null: false　foreign_key: true|
+|name|string|null: false　foreign_key: true|
 ### Association
 - has_many :items
 
@@ -75,8 +65,7 @@ Things you may want to cover:
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|category_id|string|null: false　foreign_key: true|
-|category_name|string|null: false　foreign_key: true|
+|name|string|null: false　foreign_key: true|
 ### Association
 - has_many :items
 
