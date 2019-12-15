@@ -1,5 +1,5 @@
 .form
-  = form_for @test do |f|
+  = form_for @test,:url => {:action => :create} do |f|
     =f.label :name, "名前"
     =f.text_field :content
     =f.submit "Send"
