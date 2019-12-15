@@ -63,3 +63,4 @@ group :production do
 end
 
 gem 'devise'
+gem 'thor','0.20.3'
