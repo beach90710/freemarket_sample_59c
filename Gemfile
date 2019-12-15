@@ -63,3 +63,6 @@ group :production do
 end
 
 gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog', '1.36.0'
