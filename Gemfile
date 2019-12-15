@@ -65,4 +65,5 @@ end
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'thor','0.20.3'
 gem 'fog-aws'
