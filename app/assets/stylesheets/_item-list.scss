@@ -1,0 +1,148 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+#p{
+  color: white;
+}
+.newitems-header-wrapper{
+  background-color:  #F5F5F5;
+  width: 100%;
+}
+.newitems-header-left{
+  // background-color: blue;
+  color:#333333;
+  font-size: 24px;
+  width: 1000px;
+  height:40px;
+  margin: 0 auto;
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+  // ↑後々フォントを統一していきたい
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.newitems-header-right{
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+  color: rgb(0, 149, 238);
+  font-size: 14px;
+  text-decoration: none;
+  // background-color: red;
+  width: 90px;
+  height: 24px;
+  float: right;
+  margin-top: 6px;
+  position: relative;
+}
+
+.newitems-header-right::after{
+  bottom: 0px;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: 4px;
+  bottom: 3px;
+  transform: rotate(-45deg);
+  width: 10px;
+  border-bottom: 2px solid rgb(0, 149, 238);
+  border-right: 2px solid rgb(0, 149, 238);
+  margin: auto;
+}
+
+.lists_wrapper{
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 544px;
+}
+
+.items-lists{
+  background-color: #F5F5F5;
+  width: 1020px;
+  height: 544px;
+  margin: 0 auto;
+}
+.toplist{
+  // background-color:red;
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.bottomlist{
+  // background-color: blue;
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+.item-wrapper{
+  background-color: #F5F5F5;
+  width: 204px;
+  height: 272px;
+}
+.item{
+  width: 184px;
+  height: 252px;
+  margin-left: 10px;
+  margin-top: 10px;
+  // background-color: greenyellow;
+  box-sizing: border-box;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.5);
+  &__img{
+    // background-color: sienna;
+    width: 184px;
+    height: 184px;
+    position: relative;
+    background-image: url("./img/028f1a1e89fe3f7e88109d44b1e87611.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__price{
+    // background-color:black;
+    // width:78.05px;
+    height: 28px;
+    // border-radius: 0 25px 25px 0;
+    // opacity: 0.5;
+    position: absolute;
+    top: 145px;
+  }
+  &__price-mask{
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    border-radius: 0 25px 25px 0;
+  }
+  .price{
+    font-size:16px;
+    color:white;
+    font-weight: bold;
+    padding:2px 10px 2px 10px;
+    opacity: 1.0;
+  }
+  &__text-wrapper{
+    background-color: white;
+    width: 184px;
+    height: 68px;
+    // ↓シンプルな記述だけどIE9以下未対応　
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text{
+    // background-color: green;
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+    font-size: 13px;
+    width: 85%;
+    height: 60%;
+    // text-overflow: fade;
+    overflow: hidden;
+    position: relative;
+  }
+  &__text-gradient{
+    // background-color: greenyellow;
+    width: 50%;
+    height: 50%;
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background:linear-gradient(90deg,hsla(0,0%,100%,0),#fff 72%);
+  }
+}
