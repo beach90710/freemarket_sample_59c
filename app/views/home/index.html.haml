@@ -1,0 +1,56 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title free
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    :javascript
+      WebFontConfig = {
+        google: { families: [ 'Unica+One::latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+  %body
+    %header.header
+      %div.header_all
+        %div.header_b
+
+        %div.header_left
+          %a.header_img{:href => "/jp/"}
+            %img{:alt => "mercari", :src => "merukari.jpg"}/
+          %div.header_right
+            %div.header_mark1
+              %a.header_mark1_beru{:href => "/jp/"}
+                .beru &#9398;
+
+            %div.header_mark2
+              %a.header_mark2_check{:href => "/jp/"}
+                .check &#9399;   
+
+            %div.header_mark3
+              %a.header_mark3_my{:href => "/jp/"}
+                .my &#9400;  
+        %div.search
+          %from.search_a{:action => "/jp/search/"}
+            %input.search_b{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
+            %button.search_c{:type => "submit"}
+              .search_mark &#9401;
+
+        
+        
+        %nav.categories_brands
+          %a.categories{:href => "/jp/category/"}
+            .categories_mark &#9402;
+            %span.look_for カテゴリーから探す
+          %a.brands{:href => "/jp/brand/"}
+            .brands_mark &#9403;
+            %span.look_for ブランドから探す
