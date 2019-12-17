@@ -83,7 +83,7 @@ Things you may want to cover:
 |categorie_id|references|null: false, foreign_key: true|
 |condition|string|null: false|
 |shipping_charge_fee|string|null: false|
-|shippig_method|string|null: false|
+|shipping_method|string|null: false|
 発送日の目安
 ### Association
 - belongs_to :user
