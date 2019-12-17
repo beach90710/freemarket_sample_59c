@@ -24,17 +24,45 @@ Things you may want to cover:
 |first_name_kana|string|null: false|
 |last_name_kana|string|null: false|
 |birthday|date|null: false|
-|prefecture|string|null: false|
-|post_number|integer|null: false|
-|city|string|null: false|
-|address|integer|null: false|
-|building|string|
 |profile_text|string|
 |icon_img|string|
-
 ### Association
 - has_many :comments
 - has_many :items
+- has_many :addresses
+
+## addressesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|post_number|integer|null: false|
+|prefecture|string|null: false|
+|city|string|null: false|
+|address_line|integer|null: false|
+|building|string|
+### Association
+- belongs_to :user
+
+## sns_authenticationsテーブル
+|Column|Type|Options|
+|------|----|-------|@
+|user_id|references|null: false, foreign_key: true|
+|google_authentications|string|
+|facebook_authentications|string|
+### Association
+- belongs_to :user
+
+## credit_paymentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|references|null: false, foreign_key: true|
+|number|integer|null: false|
+|cvc|integer|null: false|
+|exp_month|integer|null: false|
+|exp_year|integer|null: false|
+### Association
+- belongs_to :user
+
 
 ## commentsテーブル
 |Column|Type|Options|
