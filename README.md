@@ -78,15 +78,35 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string|
 |detail|text|
 |brand_id|references|null: false, foreign_key: true|
 |categorie_id|references|null: false, foreign_key: true|
-
+|condition|string|null: false|
+|shipping_charge_fee|string|null: false|
+|shippig_method|string|null: false|
+発送日の目安
 ### Association
 - belongs_to :user
 - belongs_to :brand
 - belongs_to :category
+
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|item_id|references|null: false, foreign_key: true|
+|image1|string||
+|image2|string||
+|image3|string||
+|image4|string||
+|image5|string||
+|image6|string||
+|image7|string||
+|image8|string||
+|image9|string||
+|image10|string||
+
+### Association
+- belongs_to :item
 
 ## brandsテーブル
 |Column|Type|Options|
