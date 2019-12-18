@@ -209,4 +209,11 @@ li{
     margin-top: 25px;
     font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   }
+  &__img{
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    background-image: url("./img/camera_icon.svg");
+    background-size: 100%;
+  }
 }
