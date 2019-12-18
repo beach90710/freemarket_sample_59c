@@ -2,13 +2,58 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box
 }
+ul {
+  list-style: none;
+}
+li{
+  list-style: none;
+}
+
+
 
 #p{
   color: white;
 }
+
+.popular{
+  background-color: rgb(255, 255, 255);
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  top: 0px;
+  width: 100vw;
+  padding: 56px 0px 30px;
+  &__header{
+    margin-bottom: 16px;
+    text-align: center;
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4em;
+  }
+  &__categories-list{
+    display: flex;
+    justify-content: center;
+  }
+  &__category{
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+    background-color: rgb(239, 239, 239);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 5px 16px;
+    margin: 0 4px;
+    }
+}
+
+
+
+
 .newitems-header-wrapper{
   background-color:  #F5F5F5;
   width: 100%;
+  padding-top: 40px;
 }
 .newitems-header-left{
   // background-color: blue;
@@ -144,5 +189,24 @@
     bottom: 0;
     right: 0;
     background:linear-gradient(90deg,hsla(0,0%,100%,0),#fff 72%);
+  }
+}
+
+.putup{
+  background-color: rgb(234, 53, 45);
+  bottom: 32px;
+  font-size: 22px;
+  height: 160px;
+  right: 32px;
+  width: 160px;
+  position: fixed;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 80px;
+  &__text{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 25px;
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   }
 }
