@@ -120,6 +120,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+<!-- |grand-parent_id|integer| -->
+<!-- |paretnt_id|integer| -->
 ### Association
 - has_many :items
 
