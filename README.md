@@ -111,6 +111,7 @@ Things you may want to cover:
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
+<!-- |item_id|references|foreign_key: true| -->
 |name|string|null: false|
 ### Association
 - has_many :items
@@ -119,6 +120,7 @@ Things you may want to cover:
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
+<!-- |item_id|references|foreign_key: true| -->
 |name|string|null: false|
 <!-- |grand-parent_id|integer| -->
 <!-- |paretnt_id|integer| -->
