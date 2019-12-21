@@ -23,7 +23,9 @@ Things you may want to cover:
 |last_name|string|null: false|
 |first_name_kana|string|null: false|
 |last_name_kana|string|null: false|
-|birthday|date|null: false|
+|birth_year|integer|null: false|
+|birth_month|integer|null: false|
+|birth_day|integer|null: false|
 |profile_text|string|
 |icon_img|string|
 ### Association
@@ -77,14 +79,16 @@ Things you may want to cover:
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|categorie_id|references|null: false, foreign_key: true|
+|brand_id|references|null: false, foreign_key: true|
+|condition|string|null: false|
 |name|string|null: false|
 |detail|text|
-|brand_id|references|null: false, foreign_key: true|
-|categorie_id|references|null: false, foreign_key: true|
-|condition|string|null: false|
 |shipping_charge_fee|string|null: false|
 |shipping_method|string|null: false|
-発送日の目安
+|shipping_origin|string|null: false|
+|days_to_shipping|string|null: false|
+|price|integer|null: false|
 ### Association
 - belongs_to :user
 - belongs_to :brand
@@ -111,7 +115,6 @@ Things you may want to cover:
 ## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-<!-- |item_id|references|foreign_key: true| -->
 |name|string|null: false|
 ### Association
 - has_many :items
@@ -120,10 +123,8 @@ Things you may want to cover:
 ## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-<!-- |item_id|references|foreign_key: true| -->
 |name|string|null: false|
-<!-- |grand-parent_id|integer| -->
-<!-- |paretnt_id|integer| -->
+|parent_id|integer|null: true|
 ### Association
 - has_many :items
 
