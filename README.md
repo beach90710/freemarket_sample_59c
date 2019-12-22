@@ -98,17 +98,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |item_id|references|null: false, foreign_key: true|
-|image1|string||
-|image2|string||
-|image3|string||
-|image4|string||
-|image5|string||
-|image6|string||
-|image7|string||
-|image8|string||
-|image9|string||
-|image10|string||
-
+|image|string|
 ### Association
 - belongs_to :item
 
