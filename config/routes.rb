@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get "sign_out", to: "users/sessions#destroy" 
   end
   resources :test
-  root 'text#index'
+  root 'test#index'
 
 end
 
