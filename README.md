@@ -29,11 +29,11 @@ Things you may want to cover:
 |profile_text|string|
 |icon_img|string|
 ### Association
-- has_many :comments
-- has_many :items
-- has_many :addresses
-- belongs_to :credit_payments
-- belongs_to :sns_authentications
+- has_many :comments, dependent: :destroy
+- has_many :addresses, dependent: :destroy
+- has_many :items, dependent: :destroy
+- has_many :credit_payments, dependent: :destroy
+- has_many :sns_authentications, dependent: :destroy
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -81,6 +81,7 @@ Things you may want to cover:
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|users_id|string|null: false|
 |categorie_id|references|null: false, foreign_key: true|
 |brand_id|references|null: false, foreign_key: true|
 |condition|string|null: false|
@@ -95,6 +96,7 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :brand
 - belongs_to :category
+- has_many :images, dependent: :destroy
 
 ## imagesテーブル
 |Column|Type|Options|
