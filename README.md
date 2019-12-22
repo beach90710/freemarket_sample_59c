@@ -32,6 +32,8 @@ Things you may want to cover:
 - has_many :comments
 - has_many :items
 - has_many :addresses
+- belongs_to :credit_payments
+- belongs_to :sns_authentications
 
 ## addressesテーブル
 |Column|Type|Options|
@@ -47,7 +49,7 @@ Things you may want to cover:
 
 ## sns_authenticationsテーブル
 |Column|Type|Options|
-|------|----|-------|@
+|------|----|-------|
 |user_id|references|null: false, foreign_key: true|
 |google_authentications|string|
 |facebook_authentications|string|
@@ -99,7 +101,6 @@ Things you may want to cover:
 |------|----|-------|
 |item_id|references|null: false, foreign_key: true|
 |image|string|
-カラムからむ
 ### Association
 - belongs_to :item
 
