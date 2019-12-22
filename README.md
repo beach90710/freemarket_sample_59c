@@ -22,3 +22,30 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+CREATE TABLE OrgChart
+ (emp  VARCHAR(32) PRIMARY KEY,
+  boss VARCHAR(32),
+  role VARCHAR(32) NOT NULL ); 
+
+INSERT INTO OrgChart VALUES ('categories', NULL,  'big');
+INSERT INTO OrgChart VALUES ('woman', 'categories', 'large');
+INSERT INTO OrgChart VALUES ('man', 'categories', 'large');
+
+
+INSERT INTO OrgChart VALUES ('tops', 'woman', 'medium');
+INSERT INTO OrgChart VALUES ('t-shut', 'tops', 'small');
+
+
+emp         boss         role
+----        -----        ----
+categories  NULL         big
+
+woman       categories   large
+man         categories   large
+
+tops        woman        medium
+
+tshut       tops         small
