@@ -81,7 +81,7 @@ Things you may want to cover:
 ## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|users_id|string|null: false|
+|users_id|references|null: false, foreign_key: true|
 |categorie_id|references|null: false, foreign_key: true|
 |brand_id|references|null: false, foreign_key: true|
 |condition|string|null: false|
