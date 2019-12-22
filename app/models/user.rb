@@ -10,9 +10,11 @@ class User < ApplicationRecord
   validates :last_name
   validates :first_name_kana
   validates :last_name_kana
-  validates :birthday
+  validates :birth_year
+  validates :birth_month
+  validates :birth_day
   end
   validates :email, presence: true, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
-  
-  # mount_uploader :image, ImageUploader
+   
+ # mount_uploader :image, ImageUploader
 end
