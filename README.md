@@ -99,6 +99,7 @@ Things you may want to cover:
 |------|----|-------|
 |item_id|references|null: false, foreign_key: true|
 |image|string|
+|image222|string|
 ### Association
 - belongs_to :item
 
