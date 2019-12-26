@@ -56,14 +56,12 @@ li{
   padding-top: 40px;
 }
 .newitems-header-left{
-  // background-color: blue;
   color:#333333;
   font-size: 24px;
   width: 1000px;
   height:40px;
   margin: 0 auto;
   font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
-  // ↑後々フォントを統一していきたい
   font-weight: 600;
   line-height: 1.4em;
 }
@@ -72,7 +70,6 @@ li{
   color: rgb(0, 149, 238);
   font-size: 14px;
   text-decoration: none;
-  // background-color: red;
   width: 90px;
   height: 24px;
   float: right;
@@ -107,13 +104,11 @@ li{
   margin: 0 auto;
 }
 .toplist{
-  // background-color:red;
   height: 50%;
   width: 100%;
   display: flex;
 }
 .bottomlist{
-  // background-color: blue;
   height: 50%;
   width: 100%;
   display: flex;
@@ -128,11 +123,9 @@ li{
   height: 252px;
   margin-left: 10px;
   margin-top: 10px;
-  // background-color: greenyellow;
   box-sizing: border-box;
   box-shadow:2px 2px 5px rgba(0,0,0,0.5);
   &__img{
-    // background-color: sienna;
     width: 184px;
     height: 184px;
     position: relative;
@@ -142,11 +135,7 @@ li{
     background-position: center center;
   }
   &__price{
-    // background-color:black;
-    // width:78.05px;
     height: 28px;
-    // border-radius: 0 25px 25px 0;
-    // opacity: 0.5;
     position: absolute;
     top: 145px;
   }
@@ -166,23 +155,19 @@ li{
     background-color: white;
     width: 184px;
     height: 68px;
-    // ↓シンプルな記述だけどIE9以下未対応　
     display: flex;
     justify-content: center;
     align-items: center;
   }
   &__text{
-    // background-color: green;
     font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
     font-size: 13px;
     width: 85%;
     height: 60%;
-    // text-overflow: fade;
     overflow: hidden;
     position: relative;
   }
   &__text-gradient{
-    // background-color: greenyellow;
     width: 50%;
     height: 50%;
     position:absolute;
