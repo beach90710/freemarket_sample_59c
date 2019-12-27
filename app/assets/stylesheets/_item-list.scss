@@ -50,12 +50,13 @@ li{
 
 
 
-.newitems-header-wrapper{
+.newitems-header{
+  &__wrapper{
   background-color:  #F5F5F5;
   width: 100%;
   padding-top: 40px;
-}
-.newitems-header-left{
+  }
+  &__left{
   color:#333333;
   font-size: 24px;
   width: 1000px;
@@ -64,8 +65,10 @@ li{
   font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   font-weight: 600;
   line-height: 1.4em;
+  }
 }
-.newitems-header-right{
+
+.newitems-header__right{
   font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   color: rgb(0, 149, 238);
   font-size: 14px;
@@ -75,20 +78,19 @@ li{
   float: right;
   margin-top: 6px;
   position: relative;
-}
-
-.newitems-header-right::after{
-  bottom: 0px;
-  content: "";
-  height: 10px;
-  position: absolute;
-  right: 4px;
-  bottom: 3px;
-  transform: rotate(-45deg);
-  width: 10px;
-  border-bottom: 2px solid rgb(0, 149, 238);
-  border-right: 2px solid rgb(0, 149, 238);
-  margin: auto;
+  &::after{
+    bottom: 0px;
+    content: "";
+    height: 10px;
+    position: absolute;
+    right: 4px;
+    bottom: 3px;
+    transform: rotate(-45deg);
+    width: 10px;
+    border-bottom: 2px solid rgb(0, 149, 238);
+    border-right: 2px solid rgb(0, 149, 238);
+    margin: auto;
+  }
 }
 
 .lists_wrapper{
