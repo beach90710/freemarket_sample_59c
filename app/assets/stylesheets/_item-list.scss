@@ -8,7 +8,9 @@ ul {
 li{
   list-style: none;
 }
-
+body{
+  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+}
 
 
 #p{
@@ -26,7 +28,6 @@ li{
   &__header{
     margin-bottom: 16px;
     text-align: center;
-    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
     font-size: 28px;
     font-weight: 600;
     line-height: 1.4em;
@@ -36,7 +37,6 @@ li{
     justify-content: center;
   }
   &__category{
-    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
     background-color: rgb(239, 239, 239);
     cursor: pointer;
     font-size: 14px;
@@ -62,14 +62,12 @@ li{
   width: 1000px;
   height:40px;
   margin: 0 auto;
-  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   font-weight: 600;
   line-height: 1.4em;
   }
 }
 
 .newitems-header__right{
-  font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   color: rgb(0, 149, 238);
   font-size: 14px;
   text-decoration: none;
@@ -150,7 +148,7 @@ li{
     font-size:16px;
     color:white;
     font-weight: bold;
-    padding:2px 10px 2px 10px;
+    padding:5px 10px 2px 10px;
     opacity: 1.0;
   }
   &__text-wrapper{
@@ -162,7 +160,6 @@ li{
     align-items: center;
   }
   &__text{
-    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
     font-size: 13px;
     width: 85%;
     height: 60%;
@@ -194,7 +191,6 @@ li{
     color: rgb(255, 255, 255);
     text-align: center;
     margin-top: 25px;
-    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
   }
   &__img{
     width: 64px;
