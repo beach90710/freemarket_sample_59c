@@ -1,0 +1,11 @@
+%li.item-wrapper
+  .item
+    .item__img{style: "background-image: url(#{item.images[0].image});"}
+      .item__price
+        .item__price-mask
+          .price
+            = "¥ #{item.price.to_s(:delimited)}"
+    .item__text-wrapper
+      .item__text
+        = item.name
+        .item__text-gradient
