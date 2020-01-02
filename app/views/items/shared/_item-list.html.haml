@@ -20,120 +20,121 @@
       もっと見る
       
 -# ↓アイテムリストの部分テンプレ　5×2ver
+    -# %ul.toplist
 .lists_wrapper
-  .items-lists
-    %ul.toplist
+  %ul.items-lists
+    - @item.each do|item|
       %li.item-wrapper
         .item
-          .item__img
+          .item__img{style: "background-image: url(#{item.images[0].image});"}
             .item__price
               .item__price-mask
                 .price
-                  = "¥ #{@item.price}"
+                  = "¥ #{item.price}"
           .item__text-wrapper
             .item__text
-              = @item.name
+              = item.name
               .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-    %ul.bottomlist
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥　ASK
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
-      %li.item-wrapper
-        .item
-          .item__img
-            .item__price
-              .item__price-mask
-                .price
-                  ¥1,000,000
-          .item__text-wrapper
-            .item__text
-              fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
-              .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -# %ul.bottomlist
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥　ASK
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
+    -#   %li.item-wrapper
+    -#     .item
+    -#       .item__img
+    -#         .item__price
+    -#           .item__price-mask
+    -#             .price
+    -#               ¥1,000,000
+    -#       .item__text-wrapper
+    -#         .item__text
+    -#           fujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロfujita御用達トロ
+    -#           .item__text-gradient
 
 .putup
   .putup__text
