@@ -1,1 +1,29 @@
-= render 'items/shared/item-list'
+.popular
+  %h2.popular__header
+    人気のカテゴリー
+  %ul.popular__categories-list
+    %li.popular__category
+      レディース
+    %li.popular__category
+      メンズ
+    %li.popular__category
+      シースー
+    %li.popular__category
+      おもちゃ・ホビー・グッズ
+
+.newitems-header__wrapper
+  .newitems-header__left
+    シースー新着アイテム
+    %a{href: '#' ,class: 'newitems-header__right'}
+      もっと見る
+      
+
+
+.lists_wrapper
+  %ul.items-lists
+    = render @new_items
+
+.putup
+  .putup__text
+    出品
+  .putup__img
