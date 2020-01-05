@@ -1,0 +1,40 @@
+%header.header
+  %div.header_warpper
+    %div.header_all
+      .icon_warpper
+        %div.header_icon{:href => "/jp/"}
+      %div.search_wrapper{:action => "/jp/search/"}
+        %input.search_window{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
+        .search_icon_wrapper{:type => "submit"} 
+          .search_icon
+            
+
+        
+    %div.header_buttum  
+      %nav.categories_brands
+        %div.categories
+          .menu_warpper
+            .menu_icon
+          %span.look_for_categories{:href => "/jp/category/"}カテゴリーから探す
+        %div.brands
+          .tag_warpper
+            .tag_icon
+          %span.look_for_brands{:href => "/jp/brand/"}ブランドから探す
+
+      %div.header_buttum_right
+        %li.iine
+          .iine_warpper
+            .iine_icon
+          .iine{:href => "/jp/"} いいね！一覧
+        %li.oshirase
+          .oshirase_warpper
+            .oshirase_icon
+          .oshirase{:href => "/jp/"} お知らせ
+        %li.check
+          .check_warpper
+            .check_icon
+          .check{:href => "/jp/"} やることリスト
+        %li.my
+          .my_warpper
+            %span.my_img
+          .my{:href => "/jp/"} マイページ
