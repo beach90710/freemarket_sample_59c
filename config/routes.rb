@@ -9,6 +9,15 @@ Rails.application.routes.draw do
     get "sign_out", to: "users/sessions#destroy" 
   end
   resources :test
+  resources :signup ,only: [:create] do
+    collection do
+      get 'step1'
+      post 'step2'
+      post 'step3'
+      post 'step4'
+      get 'done'
+    end
+  end
   root 'test#index'
 
 end
