@@ -30,9 +30,9 @@
   .field
     = f.label "年"
     %br/
-    = f.select :birth_year, id: "select_year", value: "1900"
-    = f.select :birth_month, id: "select_month"
-    = f.select :birth_day, id: "select_day"
+    = f.select :birth_year, [["--", ]]
+    = f.select :birth_month, [["--", ]]
+    = f.select :birth_day, [["--", ]]
   .actions
     = f.submit "Sign up"
 = render "users/shared/links"
