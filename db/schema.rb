@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191221055628) do
+ActiveRecord::Schema.define(version: 20200101054552) do
+
+  create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "post_first_name",      null: false
+    t.string   "post_last_name",       null: false
+    t.string   "post_first_name_kana", null: false
+    t.string   "post_last_name_kana",  null: false
+    t.integer  "user_id",              null: false
+    t.integer  "post_number",          null: false
+    t.string   "prefecture",           null: false
+    t.string   "city",                 null: false
+    t.string   "address_line",         null: false
+    t.string   "building"
+    t.integer  "phone_number"
+    t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
+  end
+
+  create_table "credit_payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id",    null: false
+    t.integer  "number",     null: false
+    t.integer  "cvc",        null: false
+    t.integer  "exp_month",  null: false
+    t.integer  "exp_year",   null: false
+    t.index ["user_id"], name: "index_credit_payments_on_user_id", using: :btree
+  end
 
   create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -41,4 +69,6 @@ ActiveRecord::Schema.define(version: 20191221055628) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "addresses", "users"
+  add_foreign_key "credit_payments", "users"
 end
