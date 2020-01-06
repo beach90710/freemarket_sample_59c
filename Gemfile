@@ -42,6 +42,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
   gem 'byebug', platform: :mri
+  gem 'pry-byebug'
 end
 
 group :development do
