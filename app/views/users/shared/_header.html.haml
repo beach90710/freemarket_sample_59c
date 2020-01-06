@@ -1,38 +1,38 @@
 %header.header
-  %div.header_warpper
+  .header_warpper
     .header_all
       .icon_warpper
-        .header_icon{:href => "/jp/"}
-      %div.search_wrapper{:action => "/jp/search/"}
-        %input.search_window{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
+        .header_icon = link_to image_tag("fmarket_logo_red"), root_path, class: "menu"
+      .search_wrapper{:action => "/jp/search/"}
+        .search_window{:name => "keyword", :placeholder => "何をお探しですか？", :type => "search", :value => ""}/
         .search_icon_wrapper{:type => "submit"} 
           .search_icon
 
-    %div.header_buttum  
+    .header_buttum  
       .categories_brands
         .categories
           .menu_warpper
             .menu_icon
-          %span.look_for_categories{:href => "/jp/category/"}カテゴリーから探す
+          %span.look_for_categories = link_to "カテゴリーから探す", "/jp/category/"
         .brands
           .tag_warpper
             .tag_icon
-          %span.look_for_brands{:href => "/jp/brand/"}ブランドから探す
+          %span.look_for_brands = link_to "ブランドから探す", "/jp/brand/"
 
-      %div.header_buttum_right
+      .header_buttum_right
         %li.iine
           .iine_warpper
             .iine_icon
-          .iine{:href => "/jp/"} いいね！一覧
+          .iine = link_to "いいね！一覧", "/jp/"
         %li.oshirase
           .oshirase_warpper
             .oshirase_icon
-          .oshirase{:href => "/jp/"} お知らせ
+          .oshirase = link_to "お知らせ", "/jp/"
         %li.check
           .check_warpper
             .check_icon
-          .check{:href => "/jp/"} やることリスト
+          .check = link_to "やることリスト", "/jp/"
         %li.my
           .my_warpper
-            %span.my_img
-          .my{:href => "/jp/"} マイページ
+            .my_img
+          .my = link_to "マイページ", "/jp/"
