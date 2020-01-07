@@ -1,6 +1,6 @@
 %li.item-wrapper
   .item
-    .item__img{style: "background-image: url(#{item.images[0].image});"}
+    = image_tag item.images[0].image, class: 'item__img' 
       .item__price
         .item__price-mask
           .price
