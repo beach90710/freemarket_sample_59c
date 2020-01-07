@@ -14,8 +14,9 @@
 .newitems-header__wrapper
   .newitems-header__left
     シースー新着アイテム
-    %a{href: '#' ,class: 'newitems-header__right'}
-      もっと見る
+    = link_to "#",class: "newitems-header__right" do
+      もっとみる
+
       
 .lists_wrapper
   %ul.items-lists
