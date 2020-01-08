@@ -9,8 +9,7 @@ Rails.application.routes.draw do
     get "sign_out", to: "users/sessions#destroy" 
   end
 
-  resources :items
-  get "top", to: "items#index"
+  resources :items,only: [:index]
   
-  resources :test
+  resources :test,only: [:create,:index,:new]
 end
