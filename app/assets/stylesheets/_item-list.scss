@@ -102,16 +102,8 @@ body{
   width: 1020px;
   height: 544px;
   margin: 0 auto;
-}
-.toplist{
-  height: 50%;
-  width: 100%;
   display: flex;
-}
-.bottomlist{
-  height: 50%;
-  width: 100%;
-  display: flex;
+  flex-wrap: wrap;
 }
 .item-wrapper{
   background-color: #F5F5F5;
@@ -125,11 +117,10 @@ body{
   margin-top: 10px;
   box-sizing: border-box;
   box-shadow:2px 2px 5px rgba(0,0,0,0.5);
+  position: relative;
   &__img{
     width: 184px;
     height: 184px;
-    position: relative;
-    background-image: url("./img/028f1a1e89fe3f7e88109d44b1e87611.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
