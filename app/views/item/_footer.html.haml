@@ -28,42 +28,39 @@
         %h2.footer-bottom_company_about_title メルカリについて
         %ul
           %li 
-            %a{:href => "https://about.mercari.com/"} 会社概要（運営会社）
+            = link_to '会社概要（運営会社）',"https://about.mercari.com/"
           %li
-            %a{:href => "https://www.mercari.com/jp/jobs/"} 採用情報
+            = link_to '採用情報',"https://www.mercari.com/jp/jobs/"
           %li
-            %a{:href => "https://about.mercari.com/press/news/"} プレスリリース
+            = link_to 'プレスリリース',"https://about.mercari.com/press/news/"
           %li
-            %a{:href => "https://jp-news.mercari.com/", :target => "_blank"} 公式ブログ
+            = link_to '公式ブログ',"https://jp-news.mercari.com/"
           %li
-            %a{:href => "https://www.mercari.com/jp/logo-guidelines/"} メルカリロゴ利用ガイドライン
-          %li
+            = link_to 'メルカリロゴ利用ガイドライン',"https://www.mercari.com/jp/logo-guidelines/"
 
-          %a{ href: '' }
-            %i.fab.fa-twitter.fa-3x
-          %a{ href: '' }
-            %i.fab.fa-facebook-square.fa-3x
+          %i.fab.fa-twitter.fa-3x
+          %i.fab.fa-facebook-square.fa-3x
 
           
       .footer-bottom_company_about  
         %h2.footer-bottom_company_about_title ヘルプ&ガイド
         %ul
           %li
-            %a{:href => "/jp/help_center/"} メルカリガイド
+            = link_to 'メルカリガイド',"/jp/help_center/"
           %li
-            %a{:href => "/jp/rakuraku-mercari/"} らくらくメルカリ便
+            = link_to 'らくらくメルカリ便',""
           %li
-            %a{:href => "/jp/yuyu-mercari/"} ゆうゆうメルカリ便
+            = link_to 'ゆうゆうメルカリ便',""
           %li
-            %a{:href => "/jp/rakuraku-ogata/"} 大型メルカリ便
+            = link_to '大型メルカリ便',""
           %li
-            %a{:href => "/jp/guide/car/"} 車体取引ガイド
+            = link_to '車体取引ガイド',""
           %li
-            %a{:href => "/jp/safe/description/", :target => "_blank"} メルカリあんしん・あんぜん宣言！
+            = link_to 'メルカリあんしん・あんぜん宣言！',""
           %li
-            %a{:href => "/jp/authenticity/"} 偽ブランド品撲滅への取り組み
+            = link_to '偽ブランド品撲滅への取り組み',""
           %li
-            %a{:href => "/jp/box/"} メルカリボックス
+            = link_to 'メルカリボックス',""
 
       .footer-bottom_company_about_3
         %h2.footer-bottom_company_about_title プライバシー利用規約
@@ -71,36 +68,34 @@
           .footer-bottom_company_about_1
             %ul
               %li
-                %a{:href => "/jp/privacy/"} プライバシーポリシー
+                = link_to 'プライバシーポリシー',""
               %li
-                %a{:href => "/jp/tos/"} メルカリ利用規約
+                = link_to 'メルカリ利用規約',""
               %li
-                %a{:href => "/jp/tos_smartphone_support/"} あんしんスマホサポート制度に関する利用特約
+                = link_to 'あんしんスマホサポート制度に関する利用特約',""
               %li
-                %a{:href => "/jp/compliance/"} コンプライアンスポリシー
+                = link_to 'コンプライアンスポリシー',""
           .footer-bottom_company_about_2
             %ul
               %li
-                %a{:href => "/jp/data_security/"} 個人データの安全管理に係る基本方針
+                = link_to '個人データの安全管理に係る基本方針',""
               %li
-                %a{:href => "/jp/tokutei/"} 特定商取引に関する表記
+                = link_to '特定商取引に関する表記',""
               %li
-                %a{:href => "/jp/shikin_kessai/"} 資金決済法に基づく表示
+                = link_to '資金決済法に基づく表示',""
               %li
-                %a{:href => "https://about.mercari.com/csr/safety/"} 法令順守と犯罪抑止のために
+                = link_to '法令順守と犯罪抑止のために',"https://about.mercari.com/csr/safety/"
 
       .footer-bottom_company_about 
         %h2.footer-bottom_company_about_title 国
         %ul
           %li
-            %a{:href => "/jp/"} 日本
+            = link_to '日本',""
           %li
             %nobr
-              %a{:href => "/"} United States
-
-
-
+              = link_to 'United States',""
+              
     .footer-bottom_banner
       .footer-bottom_banner_1
-        %img{:src => "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?1714804574"}/
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?1714804574"
       .footer-bottom_banner_2 © 2019 Mercari
