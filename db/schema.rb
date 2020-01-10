@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200101054552) do
+ActiveRecord::Schema.define(version: 20200107131821) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",           null: false
@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 20200101054552) do
     t.string   "post_first_name_kana", null: false
     t.string   "post_last_name_kana",  null: false
     t.integer  "user_id",              null: false
-    t.integer  "post_number",          null: false
+    t.string   "post_number",          null: false
     t.string   "prefecture",           null: false
     t.string   "city",                 null: false
     t.string   "address_line",         null: false
     t.string   "building"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
   end
 
