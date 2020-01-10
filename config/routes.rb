@@ -20,5 +20,8 @@ Rails.application.routes.draw do
   end
   root 'test#index'
 
+  resources :items,only: [:index]
+  
+  resources :test,only: [:create,:index,:new]
 end
 

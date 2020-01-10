@@ -43,6 +43,9 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'byebug', platform: :mri
   gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
 end
 
 group :development do

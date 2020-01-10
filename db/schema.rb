@@ -38,6 +38,31 @@ ActiveRecord::Schema.define(version: 20200107131821) do
     t.integer  "exp_month",  null: false
     t.integer  "exp_year",   null: false
     t.index ["user_id"], name: "index_credit_payments_on_user_id", using: :btree
+=======
+ActiveRecord::Schema.define(version: 20191229075704) do
+
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "image"
+    t.integer  "item_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id", using: :btree
+  end
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                null: false
+    t.string   "conditon",            null: false
+    t.string   "detail"
+    t.integer  "price",               null: false
+    t.integer  "shipping_charge_fee", null: false
+    t.string   "shipping_method",     null: false
+    t.string   "shipping_origin",     null: false
+    t.string   "days_to_shipping",    null: false
+    t.integer  "user_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["name"], name: "index_items_on_name", using: :btree
+    t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
 
   create_table "tests", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -71,4 +96,6 @@ ActiveRecord::Schema.define(version: 20200107131821) do
 
   add_foreign_key "addresses", "users"
   add_foreign_key "credit_payments", "users"
+  add_foreign_key "images", "items"
+  add_foreign_key "items", "users"
 end
