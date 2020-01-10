@@ -42,7 +42,6 @@ class SignupController < ApplicationController
     @address = Address.create(session[:address_params_after_step3].merge(user_id: @user.id))
     @credit = CreditPayment.new(session[:credit_payment].merge(user_id: @user.id))
     if @credit.save
-    binding.pry
       reset_session
       session[:user_id] = @user.id
       save_user 
