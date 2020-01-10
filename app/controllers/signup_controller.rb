@@ -1,5 +1,8 @@
 class SignupController < ApplicationController
 
+  skip_before_action :sign_up_action, only: [:step1, :step2, :step3, :step4, :create, :done]
+  skip_before_action
+
 
   def step1
     @user = User.new
@@ -30,25 +33,29 @@ class SignupController < ApplicationController
   def create
     session[:credit_payment] = credit_params
     @user = User.new(session[:user_params])
-    @credit_payment = CreditPayment.new
-    @credit_payment = CreditPayment.new(credit_params.merge(user_id: 1))
+    @credit_payment = CreditPayment.new(session[:credit_payment].merge(user_id: 1))
     render 'signup/step4' unless @credit_payment.valid?
-    if @user.save
-      @address = Address.create(session[:address_params_after_step3].merge(user_id: @user.id))
-      @credit = CreditPayment.create(credit_params.merge(user_id: @user.id))
-      reset_session
-      session[:user_id] = @user.id
-      render 'signup/done'
-    else
+    unless @user.save
       reset_session
       render 'signup/step1'
     end
+    @address = Address.create(session[:address_params_after_step3].merge(user_id: @user.id))
+    @credit = CreditPayment.new(session[:credit_payment].merge(user_id: @user.id))
+    if @credit.save
+    binding.pry
+      reset_session
+      session[:user_id] = @user.id
+      save_user 
+      redirect_to done_signup_index_path and return
+    else
+      reset_session
+      redirect_to step1_signup_index_path
+    end
   end
 
-  def done
+  def save_user
     render 'signup/step1' unless session[:user_id]
     sign_in User.find(session[:user_id]) unless user_signed_in?
-    binding.pry
   end
 
   private
