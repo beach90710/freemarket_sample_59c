@@ -1,0 +1,129 @@
+*{
+  color:white;
+  line-height: 1;
+  }
+
+li{
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.fa-twitter{
+ margin:30px 20px 0 0;
+}
+
+.footer-banner{
+  width: 100%;
+  background-image: url("https://web-jp-assets.mercdn.net/_next/static/images/download_app_bg-b57d6f1a32f2aebd89cf6f43bc2e4b39.jpg");
+  background-size: cover;  
+  &_box{
+    width: 750px;
+    margin: 0px auto;
+    }
+  &_right{
+    float: left;
+    margin: 30px 0;
+    width: 420px;
+    &_1{
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      }
+    &_2{
+      font-size: 35px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      }
+    &_3{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      &_1{
+        margin-right: 20px;
+      }
+      &_2{
+        margin-right: 8px;
+        &:hover{
+          filter: opacity(70%);
+          cursor: pointer;
+        }
+      }
+      &_3:hover{
+        filter: opacity(70%);
+        cursor: pointer;
+      }
+  }
+  &_left{
+    width: 300px;
+    float: right;
+    box-sizing: border-box;
+    } 
+  }
+}
+
+.footer-bottom{
+ width: 100%;
+ padding: 0 20px 10px 20px;
+ background-color:rgb(34, 34, 34);
+ font-size: 12px;
+}
+
+.footer-bottom_company{
+  width: 1020px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.footer-bottom_company_about{
+  padding: 0 40px 0 0;
+  margin-top: 18px;
+  width: auto;
+  &_title{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &_1{
+  padding-right: 20px;
+  }
+  &_3{
+  width: 43%;
+  padding-right: 40px;
+  margin-top: 18px;
+  }
+}
+
+.footer-bottom_company_about li{
+  margin: 14px 0 0;
+ }
+
+ .footer-bottom_company_about_3 li{
+  margin: 14px 0 0;
+ }
+ .footer-bottom_company_about_0{
+  display: flex;
+ }
+
+.footer-bottom_banner{
+  height: 31px;
+  margin: 30px 190px 20px; 
+  display: flex;
+  &_1{
+    width: 15%;
+  }
+  &_2{
+    width: 85%;
+    text-align: center;
+    line-height: 31px;
+  }
+}
