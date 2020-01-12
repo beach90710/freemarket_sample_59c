@@ -1,4 +1,10 @@
 = form_for @item do |f|
+
+  = f.fields_for :images do |a|
+    = a.file_field :image
+    
+    
+
   = f.label :name, '商品名'
   = f.text_field :name
 
