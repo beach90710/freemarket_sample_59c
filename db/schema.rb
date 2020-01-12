@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200111130036) do
+ActiveRecord::Schema.define(version: 20200111153901) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(version: 20200111130036) do
     t.integer  "user_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "Brand_id"
-    t.integer  "Category_id"
-    t.index ["Brand_id"], name: "index_items_on_Brand_id", using: :btree
-    t.index ["Category_id"], name: "index_items_on_Category_id", using: :btree
+    t.integer  "brand_id"
+    t.integer  "category_id"
+    t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
+    t.index ["category_id"], name: "index_items_on_category_id", using: :btree
     t.index ["name"], name: "index_items_on_name", using: :btree
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20200111130036) do
   end
 
   add_foreign_key "images", "items"
-  add_foreign_key "items", "Brands"
-  add_foreign_key "items", "Categories"
+  add_foreign_key "items", "brands"
+  add_foreign_key "items", "categories"
   add_foreign_key "items", "users"
 end
