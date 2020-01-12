@@ -1,0 +1,8 @@
+%h2 電話番号の確認
+= form_for @address, url: step3_signup_index_path do |f|
+  .field
+    = f.label "電話番号"
+    %br/
+    = f.number_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "携帯の電話番号を入力"
+  .actions
+    = f.submit "SMSを送信する"
