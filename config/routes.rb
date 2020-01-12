@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   end
   resources :test
 
+  resources :item_detail
+  get "item_detail", to: "item_detail#index"
 end
