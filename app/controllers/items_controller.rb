@@ -6,18 +6,19 @@ class ItemsController < ApplicationController
   
   def new
     @item = Item.new
+    # @image = Image.new
     3.times{ @item.images.build }
   end
   
   def create
-    Item.create!(item_params)
     # binding.pry
+    Item.create!(item_params)
   end
   
   private
   
   def item_params
-    params.require(:item).permit(:name,:conditon,:detail,:price,:shipping_charge_fee,:shipping_method,:shipping_origin,:days_to_shipping,:brand_id,:category_id,:user_id,:image)
+    params.require(:item).permit(:id,:name,:conditon,:detail,:price,:shipping_charge_fee,:shipping_method,:shipping_origin,:days_to_shipping,:brand_id,:category_id,:user_id,images_attributes:[:image,:id])
   end
 
 end

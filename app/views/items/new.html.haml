@@ -2,8 +2,6 @@
 
   = f.fields_for :images do |a|
     = a.file_field :image
-    
-    
 
   = f.label :name, '商品名'
   = f.text_field :name
@@ -39,5 +37,6 @@
 
   = f.label :user,'出品する人'
   = f.collection_select :user_id , User.all, :id,:nickname
+
 
   = f.submit '出品'
