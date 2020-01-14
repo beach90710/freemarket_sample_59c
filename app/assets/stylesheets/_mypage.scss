@@ -1,0 +1,56 @@
+*{
+  color:black;
+}
+
+html{
+  background: #f5f5f5;
+}
+
+.mypage{
+  margin:0 auto;
+  width: 1020px;
+  display: flex;
+  padding: 40px 0 40px;
+}
+.mypage-left{
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+  float: left;
+  
+}
+
+.mypage-left_main_list_item{
+  border-top: 1px solid #eee;
+  padding: 16px;
+  background-color: white;
+}
+
+.mypage-right_icon{
+  background-image: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?2442575");
+  height: 200px;
+  width: 700px;
+}
+
+
+.active{
+  background-color: #fff;
+  border-top: 2px solid #ea352d;
+}
+
+.mypage-right_box_tabs{
+  display: flex;
+  & li{
+    
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 50%;
+  }
+  & a{
+    color: #333;
+    font-size: 16px;
+    line-height: 72px;
+  }
+}
+
