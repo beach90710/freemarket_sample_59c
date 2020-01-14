@@ -1,20 +1,20 @@
-*{
+.footer *{
   color:white;
   line-height: 1;
   }
 
-li{
+.footer li{
   color: rgb(255, 255, 255);
   opacity: 0.7;
   font-size: 12px;
   line-height: 1.5em;
 }
 
-a{
+.footer a{
   text-decoration: none;
 }
 
-a:hover {
+.footer a:hover {
   text-decoration: underline;
 }
 
