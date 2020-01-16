@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200111153901) do
+ActiveRecord::Schema.define(version: 20200116124640) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -33,19 +33,20 @@ ActiveRecord::Schema.define(version: 20200111153901) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                null: false
-    t.string   "conditon",            null: false
+    t.string   "name",                                null: false
+    t.string   "conditon",                            null: false
     t.string   "detail"
-    t.integer  "price",               null: false
-    t.integer  "shipping_charge_fee", null: false
-    t.string   "shipping_method",     null: false
-    t.string   "shipping_origin",     null: false
-    t.string   "days_to_shipping",    null: false
+    t.integer  "price",                               null: false
+    t.integer  "shipping_charge_fee",                 null: false
+    t.string   "shipping_method",                     null: false
+    t.string   "shipping_origin",                     null: false
+    t.string   "days_to_shipping",                    null: false
     t.integer  "user_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.integer  "brand_id"
     t.integer  "category_id"
+    t.string   "status",              default: "出品中"
     t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
     t.index ["category_id"], name: "index_items_on_category_id", using: :btree
     t.index ["name"], name: "index_items_on_name", using: :btree
