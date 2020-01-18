@@ -10,7 +10,12 @@ class ItemsController < ApplicationController
   end
   
   def create
-    Item.create!(item_params)
+    @item = Item.create!(item_params)
+    if @item.save
+      redirect_to action:'index',notice: '商品を出品しました'
+    else
+      redirect_to action: 'new'
+    end
   end
 
   def edit
@@ -19,7 +24,11 @@ class ItemsController < ApplicationController
 
   def update
     edit_item = Item.find(params[:id])
-    edit_item.update(item_params)
+      if edit_item.update(item_params)
+        redirect_to action:'index'
+      else
+        redirect_to action: 'edit'
+      end
   end
 
   private
