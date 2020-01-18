@@ -35,8 +35,5 @@
   = f.label :category,'カテゴリ'
   = f.collection_select :category_id , Category.all, :id,:name
 
-  = f.label :user,'出品する人'
-  = f.collection_select :user_id , User.all, :id,:nickname
-
 
   = f.submit '出品'
