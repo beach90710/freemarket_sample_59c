@@ -23,38 +23,38 @@
   width: 280px;
   margin: 0 40px 0 0;
   float: left; 
-      &_main_list_item{
-        position: relative;
-        border-top: 1px solid #eee;
-        padding: 16px;
-        width: 280px;
-        background-color: white;
-        transition: all 0.8s; 
-        &:hover{
-          background-color: silver;
-          .i.fas.fa-chevron-right {
-            transform: translate(10px);
-          }
+    &_main_list_item{
+      position: relative;
+      border-top: 1px solid #eee;
+      padding: 16px;
+      width: 280px;
+      background-color: white;
+      transition: all 0.8s; 
+      &:hover{
+        background-color: silver;
+        .i.fas.fa-chevron-right {
+          transform: translate(10px);
         }
       }
-      &_main_list_item.active{
-        position: relative;
-        border-top: 1px solid #eee;
-        padding: 16px;
-        width: 280px;
-        background: #eee;
-        font-weight: 600;
-      }
-      &_merpay{
-        margin: 40px 0 0;
-        font-weight: 600;
-        font-size: 16px;
-      }
-      &_config{
-        margin: 40px 0 0;
-        font-weight: 600;
-        font-size: 16px;
-      } 
+    }
+    &_main_list_item.active{
+      position: relative;
+      border-top: 1px solid #eee;
+      padding: 16px;
+      width: 280px;
+      background: #eee;
+      font-weight: 600;
+    }
+    &_merpay{
+      margin: 40px 0 0;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    &_config{
+      margin: 40px 0 0;
+      font-weight: 600;
+      font-size: 16px;
+    } 
 }
 
 .mypage-right{
@@ -62,51 +62,51 @@
     background-color: #fff;
     border-top: 2px solid #ea352d;
   }
-    &_icon{
-      position: relative;
-      background-image: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?2442575");
-      height: 200px;
-      width: 700px;
-      text-align: center;
-      &_2{
-        position: absolute;  
-        top: 30%;
-        right: 0;
-        left: 0;
-      }
-      & div{
+  &_icon{
+    position: relative;
+    background-image: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?2442575");
+    height: 200px;
+    width: 700px;
+    text-align: center;
+    &_2{
+      position: absolute;  
+      top: 30%;
+      right: 0;
+      left: 0;
+    }
+    & div{
+      display: inline-block;
+    }
+    & div+div{
+      margin: 0 0 0 16px;
+    }
+  }
+  &_tabs{
+    display: flex;
+      & li{
         display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        width: 50%;
       }
-      & div+div{
-        margin: 0 0 0 16px;
+      & a{
+        color: #333;
+        font-size: 16px;
+        line-height: 72px;
+        font-weight: 600; 
+          &:hover{
+            opacity: 50%;
+          }
       }
-    }
-    &_tabs{
-      display: flex;
-        & li{
-          display: inline-block;
-          text-align: center;
-          vertical-align: top;
-          width: 50%;
-        }
-        & a{
-          color: #333;
-          font-size: 16px;
-          line-height: 72px;
-          font-weight: 600; 
-            &:hover{
-              opacity: 50%;
-            }
-        }
-    }
+  }
 }
 
-.mypage-right_content{
-  width: 700px;
-  background-color: #fff;
-  display: inline-block;
-  border-bottom: 1px solid #eee;
-  position: relative;
+    .mypage-right_content{
+    width: 700px;
+    background-color: #fff;
+    display: inline-block;
+    border-bottom: 1px solid #eee;
+    position: relative;
       & li{
         min-height: 80px;
         padding: 16px;
@@ -159,8 +159,6 @@
   top: 38%;
   right: 16px;
 }
-
- 
 
 .mypage-right_icon img{
   border-radius:50%;
