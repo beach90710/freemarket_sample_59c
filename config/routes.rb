@@ -9,11 +9,8 @@ Rails.application.routes.draw do
     get "sign_out", to: "users/sessions#destroy" 
   end
   resources :test
-<<<<<<< Updated upstream
 
   resources :item_detail
   get "item_detail", to: "item_detail#index"
-=======
-  get "test" => "test"
->>>>>>> Stashed changes
+
 end

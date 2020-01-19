@@ -119,14 +119,14 @@
 
 
 // 値段、税込、送料
-.item_price_wrapper{
+.item_detail_price_wrapper{
   width: 620px;
   height: 50px;
   text-align:  center;
   margin: 0 auto;
 }
 
-.item_price{
+.item_detail_price{
   margin: 0 16px 0 0;
   font-size: 50px;
   width: 200px;
@@ -134,7 +134,7 @@
   display: inline-block;
 }
 
-.item_tax{
+.item_detail_tax{
   width: 40px;
   height: 13px;
   font-size: 10px;
@@ -142,7 +142,7 @@
   display: inline-block;
 }
 
-.item_postage{
+.item_detail_postage{
   width: 80px;
   height: 16px;
   font-size: 16px;
@@ -262,6 +262,7 @@
   height: 100%;
   width: 700px;
   margin: 0 auto;
+  background-color: thistle;
 }
 
 .item_comment_wrapper{
@@ -333,5 +334,244 @@
   width: 13px;
   height: 21px;
   background-color: cadetblue;
+  float: right;
+}
+
+
+// コメント記入
+.item_comment_input_all{
+  width: auto;
+  height: 262px;
+}
+
+.item_comment_input_wrapper{
+  width: 652px;
+  height: 214px;
+  margin: 0 auto;
+}
+
+.item_comment_note{
+  background-repeat: no-repeat;
+  width: 652px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+}
+
+.item_comment_input{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 104px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.item_comment_input_buttun{
+  width: 100%;
+  height: 50px;
+  margin: 8px 0 0;
+  font-size: 16px;
+  text-align: center;
+  background-color: darkgray;
+  color: white;
+}
+
+
+// 商品チェンジ
+.item_detail_link_all{
+  width: 100%;
+  margin: 24px auto 0;
+}
+
+.item_detail_link_wrapper{
+  width: 700px;
+  height: 14px;
+  margin: 0 auto;
+}
+
+.item_detail_link_left_wrapper{
+  width: 315px;
+  height: 14px;
+  float: left;
+  position: relative;
+}
+.item_detail_link_left_angle_bracket{
+  width: 10px;
+  height: 14px;
+  font-size: 12px;
+  position: absolute;
+}
+
+.item_detail_link_left_name{
+  width: 300px;
+  height: auto;
+  font-size: 12px;
+  float: right;
+}
+
+.item_detail_link_right_wrapper{
+  width: 315px;
+  height: 14px;
+  float: right;
+}
+
+.item_detail_link_right_angle_bracket{
+  width: 10px;
+  height: 14px;
+  font-size: 12px;
+  right: 0;
+  float: right;
+}
+
+.item_detail_link_right_name{
+  width: 300px;
+  height: auto;
+  font-size: 12px;
+  right: 0;
+  display: inline-block;
+}
+
+
+
+// Facebookなど
+.item_media_all{
+  margin: 24px auto;
+  padding: 32px 0 24px;
+  width: 100%;
+}
+
+.item_media_wrapper{
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+  display: block;
+}
+
+.wa{
+  width: 52px;
+  height: 52px;
+}
+
+.item_facebook_icon{
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  vertical-align: middle;
+  text-align: center;
+  background-color: blue;
+}
+
+.item_twitter_icon{
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  vertical-align: middle;
+  text-align: center;
+  background-color: cyan;
+}
+
+.item_pinterest_icon{
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  vertical-align: middle;
+  text-align: center;
+  background-color: red;
+}
+
+
+
+// ユーザーのその他商品
+.item_user_etc_all{
+  width: 100%;
+  height: 100%;
+}
+
+.item_user_etc_wrapper{
+  width: 700px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.item_user_etc_select1{
+  width: 700px;
+  height: 738px;
+}
+
+.item_user_etc_header_wrapper{
+  width: 700px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.item_user_etc_header{
+  font-size: 20px;
+  width: auto;
+  height: auto;
+}
+
+.item_user_etc_window{
+  width: 700px;
+  height: 700px;
+  background-color: rosybrown;
+}
+
+.item_user_box1{
+  width: 220px;
+  height: 330px;
+  display: inline-block;
+  background-color: slategray;
+}
+
+.item_img{
+  width: 220px;
+  height: 220px;
+  background-color: tomato;
+}
+
+.item_body{
+  width: 220px;
+  height: 110px;
+}
+
+.item_name{
+  width: 188px;
+  height: 48px;
+}
+
+.item_price_wrapper{
+  width: 118px;
+  height: 17px;
+}
+
+.item_price{
+  width: 60px;
+  height: 17px;
+  font-size: 16px;
+  float: left;
+}
+
+.item_heart_icon_wrapper{
+  width: 30px;
+  height: 17px;
+  float: right;
+}
+
+.item_heart_icon{
+  width: 14px;
+  height: 17px;
+  float: left;
+}
+
+.item_heart_quantity{
+  width: 12px;
+  height: 17px;
   float: right;
 }

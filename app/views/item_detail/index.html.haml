@@ -27,10 +27,10 @@
         %td.by_category カテゴリー
         %td.by_category_select 服  
 
-  .item_price_wrapper
-    .item_price ¥2000
-    .item_tax （税込）
-    .item_postage 送料込み
+  .item_price_detail_wrapper
+    .item_detail_price ¥2000
+    .item_detail_tax （税込）
+    .item_detail_postage 送料込み
 
   .item_buy_wrapper
     .item_buy 購入画面に進む
@@ -68,7 +68,50 @@
               .item_inappropriate_icon_hata
 
     .item_comment_input_all
-      .item_comment_note
+      .item_comment_input_wrapper
+        .item_comment_note 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+        %text_area.item_comment_input
+        .item_comment_input_buttun コメントする
+
+
+.item_detail_link_all
+  .item_detail_link_wrapper
+    .item_detail_link_left_wrapper
+      .item_detail_link_left_angle_bracket <
+      .item_detail_link_left_name 商品名
+    .item_detail_link_right_wrapper
+      .item_detail_link_right_angle_bracket >
+      .item_detail_link_right_name 商品名
+
+.item_media_all
+  .item_media_wrapper
+    %wa.item_facebook
+      .item_facebook_icon
+    %wa.item_twitter
+      .item_twitter_icon
+    %wa.item_pinterest
+      .item_pinterest_icon
+
+
+.item_user_etc_all
+  .item_user_etc_wrapper
+    .item_user_etc_select1
+      .item_user_etc_header_wrapper
+        .item_user_etc_header ユーザーのその他商品
+      .item_user_etc_window
+        .item_user_box1
+          .item_img
+          .item_body
+            .item_name Tシャツ
+            .item_price_wrapper
+              .item_price_ ¥150
+              .item_heart_icon_wrapper
+                .item_heart_icon
+                .item_heart_quantity 8
+
+    .item_user_etc_select2
+
+
             
 
     
