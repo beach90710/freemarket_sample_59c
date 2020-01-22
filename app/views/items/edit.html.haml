@@ -1,0 +1,13 @@
+出品状況を変更するための編集画面(仮置)
+
+商品名→
+= @edit_item.name
+出品状況→
+= @edit_item.status
+
+-# 出品状況変更
+-# = form_tag("/tweets/#{@edit_item.id}", method: :patch) do
+
+= form_for(@edit_item) do |f|
+  = f.select :status,["出品中","出品停止"]
+  = f.submit '変更する'

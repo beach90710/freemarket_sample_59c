@@ -1,0 +1,45 @@
+%header.header
+  .header_warpper
+    .header_all
+      .icon_warpper
+        .header_icon
+         = link_to image_tag("fmarket_logo_red"), root_path, class: "menu"
+      .search_wrapper{action: "/jp/search/"}
+        .search_window{name: "keyword", placeholder: "何をお探しですか？", type: "search", value: ""}/
+        .search_icon_wrapper{type: "submit"} 
+          .search_icon
+          
+    .header_buttum  
+      .categories_brands
+        .categories
+          .menu_warpper
+            .menu_icon
+          %span.look_for_categories
+           = link_to "カテゴリーから探す", "/jp/category/"
+        .brands
+          .tag_warpper
+            .tag_icon
+          %span.look_for_brands
+           = link_to "ブランドから探す", "/jp/brand/"
+
+    .header_buttum_right
+      %li.iine
+        .iine_warpper
+          .iine_icon
+        .iine
+         = link_to "いいね！一覧", "/jp/"
+      %li.oshirase
+        .oshirase_warpper
+          .oshirase_icon
+        .oshirase
+         = link_to "お知らせ", "/jp/"
+      %li.check
+        .check_warpper
+          .check_icon
+        .check
+         = link_to "やることリスト", "/jp/"
+      %li.my
+        .my_warpper
+          .my_img
+        .my
+         = link_to "マイページ", "/jp/"

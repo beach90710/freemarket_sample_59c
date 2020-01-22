@@ -84,10 +84,11 @@ Things you may want to cover:
 |users_id|references|null: false, foreign_key: true|
 |categorie_id|references|null: false, foreign_key: true|
 |brand_id|references|null: false, foreign_key: true|
+|image_id|references|foreign_key: true|
 |condition|string|null: false|
 |name|string|null: false|
 |detail|text|
-|shipping_charge_fee|string|null: false|
+|shipping_charge_fee|integer|null: false|
 |shipping_method|string|null: false|
 |shipping_origin|string|null: false|
 |days_to_shipping|string|null: false|
