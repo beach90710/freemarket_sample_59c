@@ -20,8 +20,12 @@ Rails.application.routes.draw do
   end
   root 'test#index'
 
+  resources :item_detail
+  get "item_detail", to: "item_detail#index"
+
   resources :items,only: [:index,:new,:create,:edit,:update]
   
   resources :test,only: [:create,:index,:new]
+
 end
 
