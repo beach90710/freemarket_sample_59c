@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20200116124640) do
 
-  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-ActiveRecord::Schema.define(version: 20200107131821) do
-
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
@@ -42,6 +29,18 @@ ActiveRecord::Schema.define(version: 20200107131821) do
     t.index ["user_id"], name: "index_addresses_on_user_id", using: :btree
   end
 
+  create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "credit_payments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -51,8 +50,7 @@ ActiveRecord::Schema.define(version: 20200107131821) do
     t.integer  "exp_month",  null: false
     t.integer  "exp_year",   null: false
     t.index ["user_id"], name: "index_credit_payments_on_user_id", using: :btree
-
-ActiveRecord::Schema.define(version: 20191229075704) do
+  end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
@@ -74,6 +72,7 @@ ActiveRecord::Schema.define(version: 20191229075704) do
     t.integer  "user_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "brand_id_id"
     t.integer  "brand_id"
     t.integer  "category_id"
     t.string   "status",              default: "出品中"
