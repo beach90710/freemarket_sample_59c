@@ -1,0 +1,11 @@
+%li.item-wrapper
+  .item
+    = image_tag item.images[0].image.url, class: 'item__img' 
+    .item__price
+      .item__price-mask
+        .price
+          =  "¥#{item.price.to_s(:delimited)}"
+    .item__text-wrapper
+      .item__text
+        = item.name
+        .item__text-gradient
