@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get "item_detail", to: "item_detail#index"
 
   resources :items,only: [:index,:new,:create,:edit,:update]
+  delete  'items/:id'  => 'items#destroy'
   
   resources :test,only: [:create,:index,:new]
 
