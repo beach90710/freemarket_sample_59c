@@ -30,6 +30,11 @@ class ItemsController < ApplicationController
         redirect_to action: 'edit'
       end
   end
+  
+  def destroy
+    item = Item.find(params[:id])
+  end
+
 
   private
   
