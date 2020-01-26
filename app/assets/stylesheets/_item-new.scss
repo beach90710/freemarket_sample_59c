@@ -1,4 +1,83 @@
-.itemform{
-  display: flex;
-  flex-direction: column;
+h3{
+  font-weight: bold;
+}
+
+.form-container{
+  width: 700px;
+  background-color: #FFFFFF;
+  margin-top:2px;
+}
+.new-item-wrapper{
+  width: 100vw;
+  background-color: #F5F5F5;
+  color: #333;  
+}
+.new-item-header-logo{
+  text-align: center;
+  width: 100vw;
+  height: 128px;
+  padding-top:40px;
+  padding-bottom:40px;
+}
+.new-item-container{
+  margin: 0 auto;
+  width: 700px;
+}
+.new-item-header-put{
+  text-align: center;
+  padding: 31px 16px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.new-item-img{
+  width:700px;
+  padding: 40px;
+  height: 303px;
+  &__head{
+    font-size: 16px;
+  }
+}
+.new-item-detail-text{
+  height: 355px;
+  padding: 40px;
+}
+.new-item-detail-categoy-and-condition{
+  height: 261px;
+}
+.new-item-shipping{
+  height: 481px;
+}
+.new-item-price{
+  height: 299px;
+}
+.new-item-submit{
+  height: 329px;
+}
+
+
+
+.form-require{
+  background-color: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
+p{
+  display: block;
+  margin-top: 6px;
+  // margin-block-start: 1em;
+  // margin-block-end: 1em;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+}
+.label{
+  cursor: default;
+  font-size: 14px;
+  font-weight: bold;
 }
