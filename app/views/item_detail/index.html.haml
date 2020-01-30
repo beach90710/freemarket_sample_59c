@@ -1,5 +1,6 @@
 .item_detail_all
-  .item_detail_name ジャケット
+  .item_detail_name
+    @item.name
   .item_detail_wrapper
     .item_detail_img_wrapper
       .item_detail_img
@@ -45,7 +46,8 @@
           %th 発送の目安
           %td １日
   .item_detail_price_wrapper
-    .item_detail_price ¥2000
+    .item_detail_price
+      @item.price
     .item_detail_tax （税込）
     .item_detail_postage 送料込み
   .item_buy_wrapper
