@@ -1,3 +1,18 @@
+// p{
+//   display: block;
+//   margin-top: 6px;
+//   // margin-block-start: 1em;
+//   // margin-block-end: 1em;
+//   // margin-inline-start: 0px;
+//   // margin-inline-end: 0px;
+//   font-size: 14px;
+//   line-height: 1.5;
+//   font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+//   // margin-block-start: 1em;
+//   // margin-block-end: 1em;
+//   // margin-inline-start: 0px;
+//   // margin-inline-end: 0px;
+// }
 h3{
   font-weight: bold;
 }
@@ -17,7 +32,7 @@ select{
   width: 700px;
   background-color: #FFFFFF;
   margin-top:2px;
-  
+  padding: 40px;
 }
 .new-item-wrapper{
   width: 100vw;
@@ -48,16 +63,31 @@ select{
   &__head{
     font-size: 16px;
   }
+  p{
+    display: block;
+    margin-top: 6px;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+  }
 }
 .new-item-name-and-text{
   height: 355px;
   padding: 40px;
 }
 .new-item-detail-name{
-  padding: 40px;
+  // padding: 40px;
 }
 .new-item-detail-text{
-  padding: 0 40px 40px 40px;
+  padding-top: 40px;
 }
 .new-item-detail-categoy-and-condition{
   padding: 40px;
@@ -92,6 +122,20 @@ select{
 }
 .new-item-submit{
   height: 329px;
+  p{
+  // display: block;
+  // margin-block-start: 1em;
+  // margin-block-end: 1em;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+  font-size: 14px;
+  // line-height: 1.5;
+  // font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+  // margin-block-start: 1em;
+  // margin-block-end: 1em;
+  // margin-inline-start: 0px;
+  // margin-inline-end: 0px;
+  }
 }
 .new-item-sub-head{
   float: left;
@@ -108,16 +152,17 @@ select{
   vertical-align: top;
   font-weight: bold;
 }
-p{
-  display: block;
-  margin-top: 6px;
-  // margin-block-start: 1em;
-  // margin-block-end: 1em;
-  // margin-inline-start: 0px;
-  // margin-inline-end: 0px;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: 'Source Sans Pro', Helvetica , Arial, 'æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“', 'YuGothic', 'ãƒ¡ã‚¤ãƒªã‚ª', 'Meiryo', sans-serif;
+.form-question{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0099e8;
+  color: #fff;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
 }
 .label{
   cursor: default;
@@ -158,12 +203,25 @@ p{
   font-size: 14px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: 24px 0;
+  padding: 22px 0;
+  box-sizing: border-box;
   &__percent{
     float:left;
   }
   &__price{
     float: right;
+  }
+}
+.profit{
+  padding: 22px 0;
+  &__value__left{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__value__right{
+    float: right;
+    font-size: 34px;
   }
 }
 .text_area{
@@ -207,7 +265,73 @@ p{
   margin: auto auto ;
   padding: 0 10px 0 21px;
 }
-
+.link{
+  color: #0099e8;
+  text-decoration: none;
+}
+.submit{
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+}
+.back-button{
+  width: 45%;
+  margin: 24px auto 0;
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  text-align: center;
+  display: block;
+  // width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  // -webkit-transition: all ease-out .3s;
+  // transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.new-item-footer{
+  width: 456px;
+  height: 220px;
+  padding: 40px 0;
+  margin: 0 auto;
+  &__logo{
+    // margin: 0 auto;
+    text-align: center;
+    padding-top: 32px;
+  }
+  ul{
+    display: flex;
+    justify-content: center;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+  }
+  li{
+    text-align: center;
+  }
+  a{
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+  }
+  p{
+    margin: 8px 0 0;
+    font-size: 12px;
+    text-align: center;
+  }
+  .li-center{
+    margin: 0 13px;
+  }
+}
 .cf:before,
 .cf:after{
     content: "";
