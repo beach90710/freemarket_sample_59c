@@ -61,6 +61,12 @@ ActiveRecord::Schema.define(version: 20200123135701) do
     t.index ["item_id"], name: "index_images_on_item_id", using: :btree
   end
 
+  create_table "item_detail", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "id"
+    t.string  "name",                  null: false
+    t.text    "message", limit: 65535
+  end
+
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
     t.string   "conditon",                            null: false
@@ -73,7 +79,6 @@ ActiveRecord::Schema.define(version: 20200123135701) do
     t.integer  "user_id"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "brand_id_id"
     t.integer  "brand_id"
     t.integer  "category_id"
     t.string   "status",              default: "出品中"
