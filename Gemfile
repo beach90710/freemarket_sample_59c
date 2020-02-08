@@ -73,5 +73,5 @@ gem 'mini_magick'
 gem 'fog-aws'
 gem 'pry-rails'
 gem "font-awesome-sass"
-
+gem 'payjp'
 
