@@ -12,4 +12,4 @@
   = f.select :status,["出品中","出品停止"]
   = f.submit '変更する'
 
-= link_to '削除', "/items/#{@edit_item.id}", method: :delete
+= link_to '削除', item_path, method: :delete
