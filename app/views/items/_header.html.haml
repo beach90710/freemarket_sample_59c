@@ -1,0 +1,57 @@
+%header.main-header
+  .header_warpper
+    .header_all
+      .icon_warpper
+        .header_icon
+          = link_to image_tag("fmarket_logo_red.svg"), root_path, class: "menu"
+      %form.search_wrapper{action: "#", method: "post"}
+        %input.search_window{name: "keyword", placeholder: "何をお探しですか？", type: "search", value: ""}
+        %button.search_icon_wrapper{type: "submit"} 
+          %i.fas.search_icon
+          
+    .header_buttum  
+      .categories_brands
+        .categories
+          .menu_warpper
+            .menu_icon
+          %span.look_for_categories
+            = link_to "カテゴリーから探す", "/jp/category/"
+        .brands
+          .tag_warpper
+            .tag_icon
+          %span.look_for_brands
+            = link_to "ブランドから探す", "/jp/brand/"
+
+    .header_buttum_right
+      - if user_signed_in?
+        %li.iine
+          .iine_warpper
+            .iine_icon
+          .iine
+            = link_to "いいね！一覧", "#"
+        %li.oshirase
+          .oshirase_warpper
+            .oshirase_icon
+          .oshirase
+            = link_to "お知らせ", "#"
+        %li.check
+          .check_warpper
+            .check_icon
+          .check
+            = link_to "やることリスト", "#"
+        %li.my
+          .my_warpper
+            .my_img
+          .my
+            = link_to "マイページ", "/sign_in"
+      - else
+        %li.my
+          .my_warpper
+            .my_img
+          .my
+            = link_to "新規登録", "signup/step1"
+        %li.my
+          .my_warpper
+            .my_img
+          .my
+            = link_to "ログイン", "/sign_in"
