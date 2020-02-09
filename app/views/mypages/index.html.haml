@@ -1,0 +1,82 @@
+.mypage
+  .mypage_2
+    =render "./mypages/side-ber"
+    .mypage-right
+      %section.mypage-right_icon
+        = link_to '#', class:"mypage-right_icon_2" do
+          =image_tag 'https://static.mercdn.net/thumb/members/103908942.jpg?1553077366',size:'60x60'
+          %h2 ユーザー名
+          %div 
+            評価 
+            %span 123
+          %div 
+            出品数 
+            %span 123
+      %section.mypage-right
+        %ul.mypage-right_tabs
+          %li.mypage-right_tabs.active
+            %h3
+              %a お知らせ
+          %li.mypage-right_tabs
+            %h3
+              %a やることリスト        
+      .mypage-right_content
+        %li.mypage-right_content
+          = link_to '#' do
+            .mypage-right_content_1
+              = image_tag "//static.mercdn.net/images/mercari_profile.png", size: '48x48'
+            .mypage-right_content_2 ログイン通知
+            .mypage-right_content_3 
+              .i.far.fa-clock
+                %span 1時間
+          .i.fas.fa-chevron-right
+        %li.mypage-right_content
+          = link_to '#' do
+            .mypage-right_content_1
+              = image_tag "//static.mercdn.net/images/mercari_profile.png", size: '48x48'
+            .mypage-right_content_2 ログイン通知
+            .mypage-right_content_3 
+              .i.far.fa-clock
+                %span 2時間
+          .i.fas.fa-chevron-right
+        %li.mypage-right_content
+          = link_to '#' do
+            .mypage-right_content_1
+              = image_tag "//static.mercdn.net/images/mercari_profile.png", size: '48x48'
+            .mypage-right_content_2 ログイン通知
+            .mypage-right_content_3 
+              .i.far.fa-clock
+                %span 3時間
+          .i.fas.fa-chevron-right
+        %li.mypage-right_content
+          = link_to '#' do
+            .mypage-right_content_1
+              = image_tag "//static.mercdn.net/images/mercari_profile.png", size: '48x48'
+            .mypage-right_content_2 ログイン通知
+            .mypage-right_content_3 
+              .i.far.fa-clock
+                %span 4時間
+          .i.fas.fa-chevron-right
+        %li.mypage-right_content
+          = link_to '#' do
+            .mypage-right_content_1
+              = image_tag "//static.mercdn.net/images/mercari_profile.png", size: '48x48'
+            .mypage-right_content_2 ログイン通知
+            .mypage-right_content_3 
+              .i.far.fa-clock
+                %span 5時間
+          .i.fas.fa-chevron-right
+        %li.mypage-right_content 
+          = link_to '#' do
+            .mypage-right_content_4 一覧を見る      
+      .mypage-right_bottom
+        %h2.mypage-right_bottom_head 購入した商品
+        %ul.mypage-right_tabs
+          %li.mypage-right_tabs.active
+            %h3
+              %a 取引中
+          %li.mypage-right_tabs
+            %h3
+              %a 過去の取引
+        %ul
+          %li.mypage-right_bottom_content 取引中の商品がありません
