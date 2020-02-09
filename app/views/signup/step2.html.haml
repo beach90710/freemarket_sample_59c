@@ -1,8 +1,13 @@
-%h2 電話番号の確認
-= form_for @address, url: step3_signup_index_path do |f|
-  .field
-    = f.label "電話番号"
-    %br/
-    = f.number_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "携帯の電話番号を入力"
-  .actions
-    = f.submit "SMSを送信する"
+.signup-wrapper
+  = render "signup/header-step2"
+  .form-body
+    %h2.form-header 電話番号の確認
+    = form_for @address, url: step3_signup_index_path, html:{class: 'register-form'} do |f|
+      .form-content
+        .form-content__box
+          = f.label "電話番号"
+          %br/
+          = f.number_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "携帯の電話番号を入力"
+        .form-content__submit
+          = f.submit "SMSを送信する"
+  = render "signup/footer"

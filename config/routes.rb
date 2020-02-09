@@ -18,7 +18,7 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
-  root 'test#index'
+  root 'items#index'
 
   resources :item_detail
   get "item_detail", to: "item_detail#index"
