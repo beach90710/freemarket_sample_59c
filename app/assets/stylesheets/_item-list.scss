@@ -118,6 +118,7 @@ body{
   box-sizing: border-box;
   box-shadow:2px 2px 5px rgba(0,0,0,0.5);
   position: relative;
+  background-color: white;
   &__img{
     width: 184px;
     height: 184px;
@@ -145,7 +146,7 @@ body{
   &__text-wrapper{
     background-color: white;
     width: 184px;
-    height: 68px;
+    height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +188,7 @@ body{
     width: 64px;
     height: 64px;
     margin: 0 auto;
-    background-image: url("./img/camera_icon.svg");
+    background-image: url("camera_icon.svg");
     background-size: 100%;
   }
 }
