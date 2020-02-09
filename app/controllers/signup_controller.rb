@@ -1,7 +1,7 @@
 class SignupController < ApplicationController
 
   skip_before_action :sign_up_action, only: [:step1, :step2, :step3, :step4, :create, :done]
-  skip_before_action
+
 
 
   def step1
