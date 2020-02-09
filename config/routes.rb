@@ -18,7 +18,7 @@ Rails.application.routes.draw do
       get 'done'
     end
   end
-  root 'test#index'
+  root 'items#index'
 
   resources :items,only: [:index]
   
