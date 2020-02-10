@@ -6,7 +6,7 @@
       %h2.mypage-profile_title プロフィール
       .mypage-profile_image
         =image_tag 'https://static.mercdn.net/thumb/members/103908942.jpg?1553077366',size:'60x60' 
-        %input{:name => "nickname",type:"text",value:"#{@user.nickname}"}
+        %input{:name => "nickname",type:"text",value:"#{current_user.nickname}"}
       .mypage-profile_content
         %textarea こんにちは！よろしくお願いします！
         %button{type:"submit"} 変更する
