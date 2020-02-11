@@ -23,7 +23,11 @@ Rails.application.routes.draw do
   resources :item_detail
   get "item_detail", to: "item_detail#index"
 
-  resources :items,only: [:index,:new,:create,:edit,:update]
+  resources :items,only: [:index,:new,:create,:edit,:update,:show]do
+    collection do
+      post 'pay/:id'=> 'items#pay', as: 'pay'
+    end
+  end
   
   resources :test,only: [:create,:index,:new]
 
