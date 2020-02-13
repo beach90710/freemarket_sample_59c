@@ -1,16 +1,18 @@
-h3{
-  font-weight: bold;
-}
-select{
-  width: 100%;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding: 0 16px;
-  background-image: url(down-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: 20px 16px;
-  background-position: right 10px center;
+.new-item-wrapper{
+  h3{
+    font-weight: bold;
+  }
+  select{
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 16px;
+    background-image: image-url('down-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+    background-position: right 10px center;
+  }
 }
 .form-container{
   width: 700px;

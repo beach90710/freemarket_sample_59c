@@ -1,17 +1,22 @@
-%h2 支払い方法
-= form_for @credit_payment, url: signup_index_path, method: :post do |f|
-  .field
-    = f.label "カード番号"
-    %br/
-    = f.number_field :number, autocomplete: "cc-number", placeholder: "半角数字のみ"
-  .field
-    = f.label "有効期限"
-    %br/
-    = f.select :exp_month, [["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"],["11", "11"],["12", "12"]]
-    = f.select :exp_year, [["15", "15" ],["16", "16" ],["17", "17" ],["18", "18" ],["19", "19" ],["20", "20" ],["21", "21" ],["22", "22" ],["23", "23" ],["24", "24" ],["25", "25" ],["26", "26" ]]
-  .field
-    = f.label "セキュリティコード"
-    %br/
-    = f.number_field :cvc, autocomplete: "cc-csc", placeholder: "カード背面4桁もしくは3桁の番号"
-  .actions
-    = f.submit "次へ進む"
+.signup-wrapper
+  = render "signup/header-step4"
+  .form-body
+    %h2.form-header 支払い方法
+    = form_for @credit_payment, url: signup_index_path, method: :post, html:{class: 'register-form'}  do |f|
+      .form-content
+        .form-content__box
+          = f.label "カード番号"
+          %br/
+          = f.number_field :number, autocomplete: "cc-number", placeholder: "半角数字のみ"
+        .form-content__box
+          = f.label "有効期限"
+          %br/
+          = f.select :exp_month, [["1", "1"],["2", "2"],["3", "3"],["4", "4"],["5", "5"],["6", "6"],["7", "7"],["8", "8"],["9", "9"],["10", "10"],["11", "11"],["12", "12"]]
+          = f.select :exp_year, [["15", "15" ],["16", "16" ],["17", "17" ],["18", "18" ],["19", "19" ],["20", "20" ],["21", "21" ],["22", "22" ],["23", "23" ],["24", "24" ],["25", "25" ],["26", "26" ]]
+        .form-content__box
+          = f.label "セキュリティコード"
+          %br/
+          = f.number_field :cvc, autocomplete: "cc-csc", placeholder: "カード背面4桁もしくは3桁の番号"
+        .form-content__submit
+          = f.submit "次へ進む"
+  = render "signup/footer"
