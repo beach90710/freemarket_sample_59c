@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   resources :items,only: [:index,:new,:create,:edit,:update,:show]do
     collection do
       post 'pay/:id'=> 'items#pay', as: 'pay'
+      get :done
     end
   end
   

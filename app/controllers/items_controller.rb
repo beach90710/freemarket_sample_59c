@@ -41,6 +41,11 @@ class ItemsController < ApplicationController
     card: params['payjp-token'],
     currency: 'jpy'
     )
+    redirect_to action: 'done'
+  end
+
+  def done
+    
   end
 
   private
