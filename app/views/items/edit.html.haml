@@ -1,9 +1,13 @@
-出品状況を変更するための編集画面(仮置)
-
-商品名→
-= @edit_item.name
-出品状況→
-= @edit_item.status
+= form_for(@edit_item) do |f|
+  .item-name 商品名 必須
+  = f.text_field :name, {placeholder: "商品名 (必須40文字まで)", maxlength: "40"}
+  .item-detail 商品説明 必須
+  = f.text_field :detail, {placeholder: "商品説明 (必須1,000文字まで)", maxlength: "1000"}
+  .item-category カテゴリ
+  = f.select :category_id, options_from_collection_for_select(Category.where(category_id: @edit_item.category.category_id), :id, :name)
+  .item-price 価格
+  = f.text_field :price, {id: "price", class: "edit_item", placeholder: "例）300", maxlength: "7"}
+  = f.submit '変更する'
 
 -# 出品状況変更
 -# = form_tag("/tweets/#{@edit_item.id}", method: :patch) do
@@ -11,5 +15,8 @@
 = form_for(@edit_item) do |f|
   = f.select :status,["出品中","出品停止"]
   = f.submit '変更する'
+
+
+= link_to '編集', edit_item_path, method: :get
 
 = link_to '削除', item_path, method: :delete
