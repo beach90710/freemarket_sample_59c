@@ -30,6 +30,16 @@ class ItemsController < ApplicationController
         redirect_to action: 'edit'
       end
   end
+  
+  def destroy
+    item = Item.find(params[:id])
+      if item.user_id == current_user.id && item.destroy
+        redirect_to items_path notice:'削除できました'
+      else
+        redirect_to items_path notice:'削除できませんでした'
+      end
+  end
+
 
   def pay
     @item = Item.find(params[:id])
