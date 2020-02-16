@@ -1,4 +1,12 @@
-%h2 会員登録完了
-%p ありがとうございます。 
-%p 会員登録が完了しました。
-    
+.signup-wrapper
+  = render "signup/header-done"
+  .form-body
+    %h2.form-header会員登録完了
+    .register-form
+      .form-content
+        .form-content__box
+          %p ありがとうございます。 
+          %p 会員登録が完了しました。
+        .form-content__submit
+          %a.single-footer-logo{href: "/"} メルカリを始める
+  = render "signup/footer"
