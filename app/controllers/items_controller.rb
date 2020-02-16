@@ -41,6 +41,20 @@ class ItemsController < ApplicationController
   end
 
 
+  def pay
+    @item = Item.find(params[:id])
+    Payjp.api_key = ENV['PAY_JP_ACCESS_KEY']
+    charge = Payjp::Charge.create(
+    amount: @item.price,
+    card: params['payjp-token'],
+    currency: 'jpy'
+    )
+    redirect_to action: 'done'
+  end
+
+  def done
+  end
+
   private
   
   def item_params
