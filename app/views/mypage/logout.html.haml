@@ -1,0 +1,10 @@
+- breadcrumb :mypage_logout
+= render 'items/header'
+= render 'shared/breadcrumb'
+.mypage
+  .mypage_2
+    =render "side-ber"
+    .logout
+      .logout_out
+        %button        
+          = link_to "ログアウト", destroy_user_session_path, method: :delete

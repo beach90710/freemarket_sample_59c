@@ -1,11 +1,15 @@
+- breadcrumb :mypage
+= render 'items/header'
+= render 'shared/breadcrumb'
 .mypage
   .mypage_2
-    =render "./mypages/side-ber"
+    =render "side-ber"
     .mypage-right
       %section.mypage-right_icon
         = link_to '#', class:"mypage-right_icon_2" do
           =image_tag 'https://static.mercdn.net/thumb/members/103908942.jpg?1553077366',size:'60x60'
-          %h2 ユーザー名
+          %h2 
+            =  "#{current_user.nickname}"
           %div 
             評価 
             %span 123

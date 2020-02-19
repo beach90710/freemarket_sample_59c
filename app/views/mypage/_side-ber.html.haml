@@ -1,7 +1,7 @@
 .mypage-left
   %nav.mypage-left_main
     %ul.mypage-left_main_list
-      = link_to '#',class: "mypage-left_main_list_item active" do
+      = link_to '/mypage',class: "mypage-left_main_list_item active" do
         マイページ
         .i.fas.fa-chevron-right
       = link_to '#',class: "mypage-left_main_list_item" do
@@ -47,24 +47,24 @@
         .i.fas.fa-chevron-right
     %h3.mypage-left_config 設定
     %ul.mypage-left_main_list
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/profile',class: "mypage-left_main_list_item" do
         プロフィール
         .i.fas.fa-chevron-right
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/deliver_address',class: "mypage-left_main_list_item" do
         発送元・お届け先住所変更
         .i.fas.fa-chevron-right
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/card',class: "mypage-left_main_list_item" do
         支払い方法
         .i.fas.fa-chevron-right
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/email_password',class: "mypage-left_main_list_item" do
         メール/パスワード
         .i.fas.fa-chevron-right
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/identification',class: "mypage-left_main_list_item" do
         本人情報
         .i.fas.fa-chevron-right
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/sms_confirmation',class: "mypage-left_main_list_item" do
         電話番号の確認
         .i.fas.fa-chevron-right
-      = link_to '#',class: "mypage-left_main_list_item" do
+      = link_to '/mypage/logout',class: "mypage-left_main_list_item" do
         ログアウト
         .i.fas.fa-chevron-right
