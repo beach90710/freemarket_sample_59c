@@ -3,29 +3,30 @@
   .item_detail_wrapper
     .item_detail_img_wrapper
       .item_detail_img
-        =image_tag @item.images[0].image.url, class: 'item_detail_img_big' 
+        =image_tag @item.images[0].image.url, class: 'item_detail_img_big' if @item.images[0].present?
         .item_detail_img_small_all
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
-          .item_detail_img_small
+          =image_tag @item.images[1].image.url,  class: 'item_detail_img_small' if @item.images[1].present?
+          =image_tag @item.images[2].image.url,  class: 'item_detail_img_small' if @item.images[2].present?
+          =image_tag @item.images[3].image.url,  class: 'item_detail_img_small' if @item.images[3].present?
+          =image_tag @item.images[4].image.url,  class: 'item_detail_img_small' if @item.images[4].present?
+          =image_tag @item.images[5].image.url,  class: 'item_detail_img_small' if @item.images[5].present?
+          =image_tag @item.images[6].image.url,  class: 'item_detail_img_small' if @item.images[6].present?
+          =image_tag @item.images[7].image.url,  class: 'item_detail_img_small' if @item.images[7].present?
+          =image_tag @item.images[8].image.url,  class: 'item_detail_img_small' if @item.images[8].present?
+          =image_tag @item.images[9].image.url,  class: 'item_detail_img_small' if @item.images[9].present?
+          =image_tag @item.images[10].image.url, class: 'item_detail_img_small' if @item.images[10].present?
     .item_detail_information 
-      %table{:border => "1"}
+      %table{border: "1"}
         %tr
           %th 出品者
-          %td #{@user.nickname}
+          %td #{@item.user.nickname}
         %tr
           %th カテゴリー
-          %td 服
-        %tr
-          %th ブランド
-          %td アルマーニ
+          %td #{@item.category.name}
+        - if @item.brand.present?
+          %tr 
+            %th ブランド
+            %td #{@item.brand.name}
         %tr
           %th 商品のサイズ
           %td M
@@ -34,16 +35,16 @@
           %td #{@item.conditon}
         %tr
           %th 配送料の負担
-          %td 送料込み（出品者負担）
+          %td #{@item.shipping_charge_fee}
         %tr
           %th 配送の方法
-          %td 郵便
+          %td #{@item.shipping_method}
         %tr
           %th 発送元地域
           %td #{@item.shipping_origin}
         %tr
           %th 発送の目安
-          %td １日
+          %td #{@item.days_to_shipping}
   .item_detail_price_wrapper
     .item_detail_price #{@item.price}
     .item_detail_tax （税込）
