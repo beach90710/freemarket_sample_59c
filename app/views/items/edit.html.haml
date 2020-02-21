@@ -1,15 +1,141 @@
-出品状況を変更するための編集画面(仮置)
-
-商品名→
-= @edit_item.name
-出品状況→
-= @edit_item.status
-
--# 出品状況変更
--# = form_tag("/tweets/#{@edit_item.id}", method: :patch) do
-
-= form_for(@edit_item) do |f|
-  = f.select :status,["出品中","出品停止"]
-  = f.submit '変更する'
-
-= link_to '削除', item_path, method: :delete
+.new-item-wrapper
+  .new-item-header-logo
+    = image_tag 'mercariLogo.svg',height: '49', width: '185', class: 'mercari-logo'
+  .new-item-container
+    = form_for @edit_item do |f|
+      .new-item-header-put.form-container
+        商品情報編集
+      .new-item-img.form-container
+        %h3.new-item-img__head
+          出品画像
+          %span.form-require
+            必須
+        %p 最大10枚までアップロードできます
+        .item-preview
+        = f.fields_for :images do |a|
+          = a.file_field :image
+        - @edit_item.images.count.upto(9) do |index|
+          -# accepts_nested_attributes
+          = file_field_tag :image, name: "item[images_attributes][#{index}][image]"
+          
+      /- if @edit_item.present?
+      /- @edit_item.images.each do |image|
+      /= image_tag image.image.url, class: 'item-preview'
+          
+          
+      .form-container
+        .new-item-detail-name
+          = f.label :name, '商品名',class: 'label'
+          %span.form-require
+            必須
+          = f.text_field :name,class: 'input',placeholder:"商品名（必須40文字まで）"
+        .new-item-detail-text
+          = f.label :detail, '商品の説明',class: 'label'
+          %span.form-require
+            必須
+          = f.text_area :detail,class: 'text_area',rows: '5',placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。'
+      .form-container.cf
+        %h3.new-item-sub-head
+          商品の詳細
+        .form-wrapper
+          .form-group
+            .selectform-label
+              = f.label :category,'カテゴリー',class: 'label'
+              %span.form-require
+                必須
+            .selectform-wrapper
+              = f.collection_select :category_id , Category.all,:id,:name,{prompt:"---"},{class:"selectform"}
+          .form-group
+            .selectform-label
+              = f.label :conditon, '商品の状態',class: 'label'
+              %span.form-require
+                必須
+            .selectform-wrapper
+              = f.select :conditon, ["新品、未使用","未使用に近い","目立った傷や汚れなし","やや傷や汚れあり","傷や汚れあり","全体的に状態が悪い"],{prompt:"---"},{class: 'selectform'}
+      .form-container.cf
+        %h3.new-item-sub-head<>
+          配送について
+          = link_to "?", 'https://www.mercari.com/jp/help_center/article/68/',class: 'form-question'
+        .form-wrapper
+          .form-group
+            .selectform-label
+              = f.label :shipping_charge_fee, '配送料の負担',class: 'label'
+              %span.form-require
+                必須
+            .selectform-wrapper
+              = f.select :shipping_charge_fee,["送料込み(出品者負担)","着払い(購入者負担)"],{prompt:"---"},{class: 'selectform'}
+          .form-group
+            .selectform-label
+              = f.label :shipping_origin, '発送元の地域',class: 'label'
+              %span.form-require
+                必須
+            .selectform-wrapper
+              = f.select :shipping_origin,["北海道","沖縄"],{prompt:"---"},{class: 'selectform'}
+          .form-group
+            .selectform-label
+              = f.label :days_to_shipping, '発送までの日数',class: 'label'
+              %span.form-require
+                必須
+            .selectform-wrapper
+              = f.select :days_to_shipping,["1~2日で発送","2~3日で発送","4~7日で発送"],{prompt:"---"},{class: 'selectform'}
+          .form-group
+            .selectform-label
+              = f.label :shipping_method, '配送の方法',class: 'label'
+              %span.form-require
+                必須
+            .selectform-wrapper
+              = f.select :shipping_method, ["らくらくメルカリ便","ゆうゆうメルカリ便","未定","ゆうメール","クロネコヤマト"],{prompt:"---"},{class: 'selectform'}
+                
+      .form-container.cf
+        %h3.new-item-sub-head<>
+          販売価格(300〜9,999,999)
+          = link_to "?", 'https://www.mercari.com/jp/help_center/article/68/',class: 'form-question'
+        .form-wrapper
+          .price-group
+            .priceform-label
+              = f.label :price, '価格',class: 'label'
+              %span.form-require
+                必須
+            .sell-price
+              .yen-mark
+                ¥
+              = f.text_field :price,class: 'sell-price-input',placeholder: '例）300'
+          .sales-commission.cf
+            .sales-commission__percent
+              販売手数料(10%)
+            .sales-commission__price
+              %q -
+          .profit.cf
+            .profit__value__left
+              販売利益
+            .profit__value__right
+              %q -
+      .new-item-submit.form-container
+        %div
+          %p<>
+            = link_to "禁止されている出品", 'https://www.mercari.com/jp/help_center/getting_started/prohibited_items/', class:"link"
+            、
+            = link_to "行為", 'https://www.mercari.com/jp/help_center/getting_started/prohibited_conduct/', class:"link"
+            を必ずご確認ください。
+          %p<>
+            またブランド品でシリアルナンバー等がある場合はご記載ください。
+            = link_to "偽ブランドの販売", 'https://www.mercari.com/jp/help_center/getting_started/counterfeit_goods/', class:"link"
+            は犯罪であり処罰される可能性があります。
+          %p<>
+            また、出品をもちまして
+            = link_to "加盟店規約", 'https://www.mercari.com/jp/help_center/getting_started/counterfeit_goods/', class:"link"
+            に同意したことになります。
+        = f.submit '変更する', class: 'submit'
+        = link_to 'キャンセル', root_path, class: 'back-button'
+      .new-item-footer
+        %ul
+          %li
+            = link_to "プライバシーポリシー",'https://www.mercari.com/jp/privacy/'
+          %li
+            = link_to "メルカリ利用規約",'https://www.mercari.com/jp/tos/',class: 'li-center'
+          %li
+            = link_to "特定商取引に関する表記",'https://www.mercari.com/jp/tokutei/'
+        .new-item-footer__logo
+          = image_tag 'mercariLogo_grey.svg',height: '65', width: '80'
+        %p
+          © Mercari, Inc.

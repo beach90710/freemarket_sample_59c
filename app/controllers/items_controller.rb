@@ -18,16 +18,20 @@ class ItemsController < ApplicationController
     end
   end
 
+  def show
+    @item = Item.find(params[:id])
+  end
+  
   def edit
     @edit_item = Item.find(params[:id])
   end
 
   def update
     edit_item = Item.find(params[:id])
-      if edit_item.update(item_params)
-        redirect_to action:'index'
+      if item.user_id == current_user.id && edit_item.update(item_params) 
+        redirect_to action:'index', notice:'編集しました'
       else
-        redirect_to action: 'edit'
+        redirect_to action: 'edit', notice:'編集できませんでした'
       end
   end
   
