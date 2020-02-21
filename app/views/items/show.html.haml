@@ -1,7 +1,7 @@
 = form_tag(action: :pay, method: :post) do
-  %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入する" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
+  %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
+e63aa170"}
 
 - if user_signed_in? && current_user.id == @items.user_id
   = link_to '編集', edit_item_path, method: :get
   = link_to '削除', item_path, method: :delete
-  
