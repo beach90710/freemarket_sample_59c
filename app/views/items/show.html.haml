@@ -1,9 +1,9 @@
 .item_detail_all
-  .item_detail_name @item.name
+  .item_detail_name #{@item.name}
   .item_detail_wrapper
     .item_detail_img_wrapper
       .item_detail_img
-        .item_detail_img_big
+        =image_tag @item.images[0].image.url, class: 'item_detail_img_big' 
         .item_detail_img_small_all
           .item_detail_img_small
           .item_detail_img_small
@@ -19,7 +19,7 @@
       %table{:border => "1"}
         %tr
           %th 出品者
-          %td ina
+          %td #{@user.nickname}
         %tr
           %th カテゴリー
           %td 服
@@ -31,7 +31,7 @@
           %td M
         %tr
           %th 商品の状態
-          %td 良い
+          %td #{@item.conditon}
         %tr
           %th 配送料の負担
           %td 送料込み（出品者負担）
@@ -40,20 +40,20 @@
           %td 郵便
         %tr
           %th 発送元地域
-          %td 東京都
+          %td #{@item.shipping_origin}
         %tr
           %th 発送の目安
           %td １日
   .item_detail_price_wrapper
-    .item_detail_price ¥2000
+    .item_detail_price #{@item.price}
     .item_detail_tax （税込）
     .item_detail_postage 送料込み
   .item_buy_wrapper
-    .item_buy 購入画面に進む
+    .item_buy 
       = form_tag(action: :pay, method: :post) do
         %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
   .itme_explanation_wrapper
-    .item_explanation ジャケット S 着丈67肩幅39袖丈61,品番はST-12030505です。①フォロー割引→10%off②リピート割引→15%off③まとめ買い割引→2点15%off、3点18%off、4点以上20%off
+    .item_explanation #{@item.detail}
   .item_butan_wrapper
     .item_butan
       .item_iine_wrapper
