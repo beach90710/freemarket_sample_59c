@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200123135701) do
+ActiveRecord::Schema.define(version: 20200221232448) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",           null: false
@@ -61,18 +61,12 @@ ActiveRecord::Schema.define(version: 20200123135701) do
     t.index ["item_id"], name: "index_images_on_item_id", using: :btree
   end
 
-  create_table "item_detail", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "id"
-    t.string  "name",                  null: false
-    t.text    "message", limit: 65535
-  end
-
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
     t.string   "conditon",                            null: false
     t.string   "detail"
     t.integer  "price",                               null: false
-    t.integer  "shipping_charge_fee",                 null: false
+    t.string   "shipping_charge_fee",                 null: false
     t.string   "shipping_method",                     null: false
     t.string   "shipping_origin",                     null: false
     t.string   "days_to_shipping",                    null: false
