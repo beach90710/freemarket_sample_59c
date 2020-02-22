@@ -1,8 +1,75 @@
+.item_detail_all
+  .item_detail_name #{@item.name}
+  .item_detail_wrapper
+    .item_detail_img_wrapper
+      .item_detail_img
+        =image_tag @item.images[0].image.url, class: 'item_detail_img_big' if @item.images[0].present?
+        .item_detail_img_small_all
+          =image_tag @item.images[1].image.url,  class: 'item_detail_img_small' if @item.images[1].present?
+          =image_tag @item.images[2].image.url,  class: 'item_detail_img_small' if @item.images[2].present?
+          =image_tag @item.images[3].image.url,  class: 'item_detail_img_small' if @item.images[3].present?
+          =image_tag @item.images[4].image.url,  class: 'item_detail_img_small' if @item.images[4].present?
+          =image_tag @item.images[5].image.url,  class: 'item_detail_img_small' if @item.images[5].present?
+          =image_tag @item.images[6].image.url,  class: 'item_detail_img_small' if @item.images[6].present?
+          =image_tag @item.images[7].image.url,  class: 'item_detail_img_small' if @item.images[7].present?
+          =image_tag @item.images[8].image.url,  class: 'item_detail_img_small' if @item.images[8].present?
+          =image_tag @item.images[9].image.url,  class: 'item_detail_img_small' if @item.images[9].present?
+          =image_tag @item.images[10].image.url, class: 'item_detail_img_small' if @item.images[10].present?
+    .item_detail_information 
+      %table{border: "1"}
+        %tr
+          %th 出品者
+          %td #{@item.user.nickname}
+        %tr
+          %th カテゴリー
+          %td #{@item.category.name}
+        - if @item.brand.present?
+          %tr 
+            %th ブランド
+            %td #{@item.brand.name}
+        %tr
+          %th 商品のサイズ
+          %td M
+        %tr
+          %th 商品の状態
+          %td #{@item.conditon}
+        %tr
+          %th 配送料の負担
+          %td #{@item.shipping_charge_fee}
+        %tr
+          %th 配送の方法
+          %td #{@item.shipping_method}
+        %tr
+          %th 発送元地域
+          %td #{@item.shipping_origin}
+        %tr
+          %th 発送の目安
+          %td #{@item.days_to_shipping}
+  .item_detail_price_wrapper
+    .item_detail_price #{@item.price}
+    .item_detail_tax （税込）
+    .item_detail_postage 送料込み
+  .item_buy_wrapper
+    .item_buy 
+      = form_tag(action: :pay, method: :post) do
+        %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
+  .itme_explanation_wrapper
+    .item_explanation #{@item.detail}
+  .item_butan_wrapper
+    .item_butan
+      .item_iine_wrapper
+        .item_iine_icon
+        .item_iine いいね！
+        .item_iine_quantity 12
+      .item_inappropriate_wrapper
+        .item_inappropriate_icon
+        .item_inappropriate 不適切な商品の報告
+    .safe_wrapper
+      .safe_icon
+      .safe あんしん・あんぜんへの取り組み
 - if user_signed_in? && current_user.id == @item.user_id
   = link_to '編集', edit_item_path, method: :get
   = link_to '削除', item_path, method: :delete
 - else
   = form_tag(action: :pay, method: :post) do
     %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
-
-

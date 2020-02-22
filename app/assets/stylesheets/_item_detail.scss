@@ -28,7 +28,7 @@
 .item_detail_img_wrapper{
   width: 300px;
   height: 375px;
-  display: inline-block;
+  float: left;
 }
 
 .item_detail_img{
@@ -39,8 +39,6 @@
 .item_detail_img_big{
   width: 300px;
   height: 300px;
-  // 適当な画像
-  background-image: image-url("./img/028f1a1e89fe3f7e88109d44b1e87611.jpg");
 }
 
 .item_detail_img_small_all{
@@ -53,8 +51,6 @@
   width: 60px;
   height: 60px;
   display: inline-block;
-  // 適当な画像
-  background-image: image-url("./img/028f1a1e89fe3f7e88109d44b1e87611.jpg");
 }
 
 
@@ -64,6 +60,7 @@
   display: inline-block;
   max-width: 300px;
   height: 420px;
+  margin-left: 15px;
 }
 
 .table {
