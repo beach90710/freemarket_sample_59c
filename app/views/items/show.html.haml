@@ -67,3 +67,9 @@
     .safe_wrapper
       .safe_icon
       .safe あんしん・あんぜんへの取り組み
+- if user_signed_in? && current_user.id == @item.user_id
+  = link_to '編集', edit_item_path, method: :get
+  = link_to '削除', item_path, method: :delete
+- else
+  = form_tag(action: :pay, method: :post) do
+    %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}

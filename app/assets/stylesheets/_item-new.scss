@@ -43,7 +43,6 @@
 .new-item-img{
   width:700px;
   padding: 40px;
-  height: 303px;
   &__head{
     font-size: 16px;
   }
@@ -271,3 +270,7 @@
     display: table;
 }
 .cf:after{ clear: both; }
+
+.item-preview{
+ width: 200px;
+}
