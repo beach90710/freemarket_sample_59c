@@ -1,6 +1,6 @@
 %li.item-wrapper
   .item
-    = link_to "/items/#{item.id}", method: :get do
+    = link_to item_path(item.id), method: :get do
       = image_tag item.images[0].image.url, class: 'item__img' 
     .item__price
       .item__price-mask
