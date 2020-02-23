@@ -1,17 +1,27 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "users/shared/links"
+.new-item-wrapper
+  .new-item-header-logo
+    = image_tag 'mercariLogo.svg',height: '49', width: '185', class: 'mercari-logo'
+  %h2
+  .login
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"メールアドレス", size:"28×294"
+      .field
+        %br/
+        = f.password_field :password, autocomplete: "current-password", placeholder:"パスワード", size:"28×294"
+      .login-actions
+        = f.submit "ログイン", class:'login-button'
+    = render "users/shared/links"
+  .new-item-footer
+    %ul
+      %li
+        = link_to "プライバシーポリシー",'https://www.mercari.com/jp/privacy/'
+      %li
+        = link_to "メルカリ利用規約",'https://www.mercari.com/jp/tos/',class: 'li-center'
+      %li
+        = link_to "特定商取引に関する表記",'https://www.mercari.com/jp/tokutei/'
+    .new-item-footer__logo
+      = image_tag 'mercariLogo_grey.svg',height: '65', width: '80'
+    %p
+      © Mercari, Inc.
