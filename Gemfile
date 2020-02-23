@@ -75,3 +75,4 @@ gem 'pry-rails'
 gem "font-awesome-sass"
 gem 'payjp'
 gem 'gretel'
+gem 'jquery-rails'
