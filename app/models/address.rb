@@ -11,6 +11,6 @@ class Address < ApplicationRecord
   validates :building,             presence: false
   validates :phone_number,         presence: true, format: { with: /\A[0-9]{11}+\z/ }
   
-  belongs_to :user
+  belongs_to :user, optional: true
 
 end
