@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
 
   def update
     edit_item = Item.find(params[:id])
-      if edit_item.user_id == current_user.id && edit_item.update(item_params) 
+      if edit_item.update(item_params) 
         redirect_to action:'index', notice:'編集しました'
       else
         redirect_to action: 'edit', notice:'編集できませんでした'
