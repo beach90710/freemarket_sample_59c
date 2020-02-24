@@ -1,6 +1,6 @@
 (function(){
 
-   let i;
+  let i;
 
   function $set_year(){
     for(i = 2020; i > 1919; i--){
