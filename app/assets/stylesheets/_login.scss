@@ -1,0 +1,27 @@
+.login{
+  width: 480px;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-button{
+  background-color: red;
+  width: 328px;
+  height: 48px;
+  margin-top: 18px;
+  color: #fff;
+}
+
+.login-new{
+  width: 328px;
+  height: 48px;
+  background-color:#0099e8;
+  margin: 18px auto;
+  line-height: 50px;
+  color: #fff;
+  & a{
+    color: inherit;
+    text-decoration: none;
+  }
+}  
