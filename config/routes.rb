@@ -41,7 +41,7 @@ Rails.application.routes.draw do
 
   resources :transaction, only: [:index] do
     collection do
-      get 'buy/:id' => 'transaction#buy'
+      get 'buy/:id' => 'transaction#buy', as: 'buy'
     end
   end
   
