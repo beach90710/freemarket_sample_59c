@@ -32,13 +32,16 @@ Rails.application.routes.draw do
   end
   root 'items#index'
 
-  resources :item_detail
-  get "item_detail", to: "item_detail#index"
-
   resources :items,only: [:index,:new,:create,:edit,:update,:show,:destroy]do
     collection do
       post 'pay/:id'=> 'items#pay', as: 'pay'
       get :done
+    end
+  end
+
+  resources :transaction, only: [:index] do
+    collection do
+      get 'buy/:id' => 'transaction#buy'
     end
   end
   
