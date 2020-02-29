@@ -57,8 +57,7 @@
         = link_to '編集', edit_item_path, method: :get
         = link_to '削除', item_path, method: :delete
       - else
-        = form_tag(action: :pay, method: :post) do
-          %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
+        = link_to '購入画面に進む', buy_transaction_index_path(@item)
   .itme_explanation_wrapper
     .item_explanation #{@item.detail}
   .item_butan_wrapper

@@ -1,0 +1,55 @@
+.buy-wrapper 
+  .buy-header-logo
+    = link_to image_tag("freemarket_logo_red.svg", class: "header-icon"), root_path
+  .main-content
+    .buy-header
+      .buy-header-box
+        %h3 購入確認
+      .buy-content
+        .buy-content__inner
+          .buy-item-box
+            =image_tag @item.images[0].image.url, class: "buy-item-box__image"
+            .buy-item-box__detail
+              .buy-item-box__detail__name #{@item.name}
+              .buy-item-box__detail__price ￥#{@item.price}円  #{@item.shipping_charge_fee}
+      .buy-content
+        .buy-content__inner 
+          .price-table
+            .price-cell-box
+              %p.price-cell-label 支払い金額
+              %p.price-cell
+                %span ¥#{@item.price}
+          .information-table
+            .information-cell-box
+              %p.information-cell-label 支払い金額
+              %p.information-cell クレジットカード
+              %p.information-cell ************1234
+              %p.information-cell 有効期限 12 / 34
+          .information-table
+            .information-cell-box
+              %p.information-cell-label 配送先
+              %p.information-cell 〒123-4567
+              %p.information-cell 東京都 品川区 １−2−3 111号
+              %p.information-cell マーケット　太郎
+          = form_tag(action: :pay, controller: :items, method: :post) do
+            %script.payjp-button{src: "https://checkout.pay.jp", type: "text/javascript" ,"data-text": "購入画面に進む" ,"data-key": "pk_test_f3748503dd3b3e10e63aa170"}
+                
+%footer.signup-footer
+  %nav
+    %ul.clearfix
+      %li
+        = link_to '#' do
+          プライバシーポリシー
+      %li
+        = link_to '#' do
+          メルカリ利用規約
+      %li
+        = link_to '#' do
+          特定商取引に関する表記
+  = link_to root_path, class: 'signup-footer__logo' do
+    = image_tag 'logo_gray.svg', alt: 'mercari', height: '65', width: '80'
+  %p
+    %small
+      © 2019 Mercari
+
+

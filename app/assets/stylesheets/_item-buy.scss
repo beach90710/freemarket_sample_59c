@@ -1,0 +1,122 @@
+.buy-wrapper{
+  display: block;
+  .buy-header-logo{
+    height: 130px;
+    text-align: center;
+    .header-icon{
+      margin: 40px 0;
+      width: 150px;
+      height: 50px;
+    }
+  }
+  .main-content{
+    display: block;
+    .buy-header{
+      width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      text-align: center;
+      .buy-header-box{
+        border-bottom: 1px solid #f5f5f5;
+        h3{
+          display: inline-block;
+          font-size: 25px;
+          font-weight: bold;
+          margin: 30px;
+        }
+      }
+      .buy-content{
+        border-bottom: 1px solid #f5f5f5;
+        padding-bottom: 48px;
+        &__inner{
+          margin-top: 30px;
+          .buy-item-box{
+            display: flex;
+            max-width: 400px;
+            margin: 0 auto;
+            &__image{
+              display: inline-block;
+              height: 100px;
+              width: 100px;
+            }
+            &__detail{
+              padding-left: 10px;
+              text-align:left;
+              display: inline-block;
+              &__name{
+                
+              }
+              &__price{
+                font-weight: bold;
+              }
+            }
+            
+          }
+          .price-table{
+            margin: auto;
+            width: 300px;
+            .price-cell-box{
+              height: 100px;
+              line-height: 100px;
+              border-bottom: 1px solid #f5f5f5;
+              margin: 30px;
+              .price-cell-label{
+                font-weight: bold;
+                float: left;
+              }
+              .price-cell{
+                font-size: 1.3rem;
+                float: right;
+                font-weight: bold;
+              }
+            }
+          }
+          .information-table{
+            font-size: 0.9rem;
+            width: 300px;
+            margin: auto;
+            .information-cell-box{
+              border-bottom: 1px solid #f5f5f5;
+              margin: 30px;
+              text-align: left;
+              padding-bottom: 30px;
+              .information-cell-label{
+                font-weight: bold;
+
+              }
+              .information-cell{
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.signup-footer{
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+  nav{
+    ul{
+      justify-content: center;
+      display: flex;
+      li{
+        margin: 5px;
+        a{
+          font-size: 12px;
+          color: gray;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__logo{
+    display: block;
+    margin-top: 30px;
+  }
+}
+
