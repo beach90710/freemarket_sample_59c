@@ -57,7 +57,7 @@
         = link_to '編集', edit_item_path, method: :get
         = link_to '削除', item_path, method: :delete
       - else
-        = link_to '購入画面に進む', "/transaction/buy/#{@item.id}"
+        = link_to '購入画面に進む', buy_transaction_index_path(@item)
   .itme_explanation_wrapper
     .item_explanation #{@item.detail}
   .item_butan_wrapper
