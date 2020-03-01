@@ -16,30 +16,30 @@
           %label お名前
           %p #{current_user.last_name} #{current_user.first_name}
         .form-group
-          %label お名前
+          %label お名前カナ
           %p #{current_user.last_name_kana} #{current_user.first_name_kana}
         .form-group
-          %label お名前
+          %label 生年月日
           %p #{current_user.birth_year}/#{current_user.birth_month}/#{current_user.birth_day}
         = form_for @address, url: '#', method: :patch do |f|
           .form-group
-            =f.label "お名前"
+            =f.label "郵便番号"
             %span 任意
             = f.number_field :post_number, placeholder: "#{@address.post_number}"
           .form-group
-            =f.label "お名前"
+            =f.label "都道府県"
             %span 任意
             = f.text_field :prefecture, placeholder: "#{@address.prefecture}"
           .form-group
-            =f.label "お名前"
+            =f.label "市区町村"
             %span 任意
             = f.text_field :city, placeholder: "#{@address.city}"
           .form-group
-            =f.label "お名前"
+            =f.label "番地"
             %span 任意
             = f.text_field :address_line, placeholder: "#{@address.address_line}"
           .form-group
-            =f.label "お名前"
+            =f.label "建物名"
             %span 任意
             = f.text_field :building, placeholder: "#{@address.building}"
           .form-submit
