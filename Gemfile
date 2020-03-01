@@ -68,6 +68,7 @@ group :production do
 end
 
 gem 'devise'
+gem 'thor','0.20.3'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
