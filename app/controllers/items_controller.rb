@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    @new_items = Item.includes(:images).order("created_at DESC").limit(10)
+    @new_items = Item.includes(:images).order("created_at DESC").limit(10).where(status: "出品中")
   end
   
   def new
@@ -53,6 +53,7 @@ class ItemsController < ApplicationController
     card: params['payjp-token'],
     currency: 'jpy'
     )
+    @item.update(status: "売り切れ")
     redirect_to action: 'done'
   end
 
